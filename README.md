@@ -13,7 +13,11 @@ A mock e-commerce website. The goal of this project is to utilize newly learned 
    npm install uuidv4
    npm install --save prop-types
    npm install react-router-dom
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
 ```
+
+> Don't forget to modify tailwind.config
 
 ## TESTING Installation Setups ⚙️
 
@@ -24,4 +28,8 @@ A mock e-commerce website. The goal of this project is to utilize newly learned 
    npm install @testing-library/user-event --save-dev
 ```
 
-> Make sure you config the above in package.json and vite config respectively
+> Make sure you config the above in package.json and vite.config respectively
+
+## Image Sources 🌅
+- https://www.pexels.com/
+- https://unsplash.com/
