@@ -15,6 +15,7 @@ A mock e-commerce website. The goal of this project is to utilize newly learned 
    npm install react-router-dom
    npm install -D tailwindcss postcss autoprefixer
    npx tailwindcss init -p
+   npm install -D sass
 ```
 
 > Don't forget to modify tailwind.config

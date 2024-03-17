@@ -1,0 +1,4 @@
+.itemList {
+	display: grid;
+	grid-template: 1fr / repeat(auto-fit, minmax(250px, 1fr));
+}
