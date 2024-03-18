@@ -1,38 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import Item from "./Item";
 import Navigation from "./Navigation";
 import styles from "../styles/shop.module.scss";
+import {ItemContext} from "../contexts/itemContext";
 
-interface Product {
-	id: number;
-	title: string;
-	price: number;
-	image: string;
-}
+// interface Product {
+// 	id: number;
+// 	title: string;
+// 	price: number;
+// 	image: string;
+// }
 
 function Shop() {
-	const [items, setItems] = useState<Product[]>([]);
-	const [loading, setLoading] = useState(true);
+	const {items, loading} = useContext(ItemContext);
 	const { id } = useParams<{ id?: string }>();
-
-	useEffect(() => {
-		fetch("https://fakestoreapi.com/products/", { mode: "cors" })
-			.then((response) => {
-				if (response.status >= 400) {
-					throw new Error("server error");
-				}
-				return response.json();
-			})
-			.then((response) => {
-				console.log(response);
-				setItems(response);
-			})
-			.catch((error) => {
-				throw error; // Throw the error to be handled by the route
-			})
-			.finally(() => setLoading(false));
-	}, []);
 
 	return (
 		<div className="main-container">
@@ -41,7 +23,7 @@ function Shop() {
 			{id ? (
 				<Item itemId={id} />
 			) : loading ? (
-				<p>Loading...</p>
+				<p className="text-center">Loading...</p>
 			) : (
 				<main className={styles.itemList}>
 					{items.length > 0 ? (
