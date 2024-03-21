@@ -3,17 +3,10 @@ import { useParams, Link } from "react-router-dom";
 import Item from "./Item";
 import Navigation from "./Navigation";
 import styles from "../styles/shop.module.scss";
-import {ItemContext} from "../contexts/itemContext";
-
-// interface Product {
-// 	id: number;
-// 	title: string;
-// 	price: number;
-// 	image: string;
-// }
+import { ItemContext } from "../contexts/itemContext";
 
 function Shop() {
-	const {items, loading} = useContext(ItemContext);
+	const { items, loading } = useContext(ItemContext);
 	const { id } = useParams<{ id?: string }>();
 
 	return (
@@ -31,8 +24,8 @@ function Shop() {
 							{items.map((item) => (
 								<Link className="border-2 px-5 py-10" key={item.id} to={`/shop/${item.id}`}>
 									<h2>{item.title}</h2>
-									<p>{item.price}</p>
 									<img className="w-40" src={item.image} alt="item picture" />
+									<p>{item.price}</p>
 								</Link>
 							))}
 						</>

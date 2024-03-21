@@ -5,14 +5,15 @@ export type Product = {
 	title: string;
 	price: number;
 	image: string;
+	quantity: number;
 };
 
-export type ItemType = {
+type ItemContextType = {
 	items: Product[];
 	loading: boolean;
 };
 
-export const ItemContext = createContext<ItemType>({
+export const ItemContext = createContext<ItemContextType>({
 	items: [],
 	loading: true,
 });
