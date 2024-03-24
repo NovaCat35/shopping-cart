@@ -2,7 +2,7 @@ import { useState, createContext } from "react";
 import { Product } from "./itemContext";
 
 interface CartProp {
-	itemId: number;
+	newItem: Product;
 	newQuantity: number;
 }
 
@@ -20,16 +20,17 @@ export const CartContext = createContext<CartContextType>({
 function CartProvider({ children }: { children: React.ReactNode }) {
 	const [cartItems, setCartItems] = useState<Product[]>([]);
 
-	const addItemToCart = ({ itemId, newQuantity }: CartProp) => {
-		const productsWithQuantity = cartItems.map((item) => {
-			if (itemId == item.id) {
-				return { ...item, quantity: newQuantity };
-			} else {
-				return item;
-			}
-		});
+	const addItemToCart = ({ newItem, newQuantity }: CartProp) => {
+		const existingItemIndex = cartItems.findIndex((item) => item.id === newItem.id);
 
-		setCartItems(productsWithQuantity);
+		// check if item already exist in cart, update quantity if so. Otherwise add to cart
+		if (existingItemIndex !== -1) {
+			const updatedCartItems = [...cartItems];
+			updatedCartItems[existingItemIndex].quantity += newQuantity;
+			setCartItems(updatedCartItems);
+		} else {
+			setCartItems([...cartItems, { ...newItem, quantity: newQuantity }]);
+		}
 	};
 
 	return <CartContext.Provider value={{ cartItems, addItemToCart }}>{children}</CartContext.Provider>;

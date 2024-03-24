@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ShoppingCart from "./ShoppingCart"
 
 function Navigation() {
 	return (
@@ -9,10 +10,7 @@ function Navigation() {
 			<Link to="/shop" className="text-white px-4 py-2">
 				Shop
 			</Link>
-         <Link to="/checkout">
-            <img src="" alt="" />
-            {/* <div>{itemCount}</div> */}
-         </Link>
+			<ShoppingCart />
 		</nav>
 	);
 }
