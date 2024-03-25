@@ -1,11 +1,28 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../contexts/cartContext";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
 
 function Checkout() {
 	const { cartItems, addItemToCart, addQuantity, subtractQuantity, deleteItem } = useContext(CartContext);
-	const [quantities, setQuantities] = useState<{ [key: number]: number }>({});
+	const [quantities, setQuantities] = useState<{ [key: number]: number }>(() => {
+		// Initialize quantities state using reduce to create a map of item IDs to quantities
+		return cartItems.reduce((acc, item) => {
+			acc[item.id] = item.quantity;
+			return acc;
+		}, {} as { [key: number]: number });
+	});
+
+	useEffect(() => {
+		// Update quantities state whenever cartItems change
+		setQuantities((prevQuantities) => {
+			const updatedQuantities = { ...prevQuantities };
+			cartItems.forEach((item) => {
+				updatedQuantities[item.id] = item.quantity;
+			});
+			return updatedQuantities;
+		});
+	}, [cartItems]);
 
 	const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>, itemId: number) => {
 		const value = parseInt(e.target.value);
@@ -14,6 +31,7 @@ function Checkout() {
 			[itemId]: value,
 		}));
 
+		// Update cart new
 		addItemToCart({ newItem: cartItems.find((item) => item.id === itemId)!, newQuantity: value });
 	};
 
