@@ -21,7 +21,6 @@ function Item({ itemId }: ItemProps) {
 		if (item) {
 			addItemToCart({ newItem: item, newQuantity: quantity });
 		}
-
 		navigate("/checkout");
 	};
 
@@ -38,7 +37,7 @@ function Item({ itemId }: ItemProps) {
 					<img className="w-40" src={item.image} alt="item picture" />
 					<p>{item.price}</p>
 					<form action="" onSubmit={handleSubmit}>
-						<input type="number" onChange={handleQuantityChange} value={quantity} min="1" />
+						<input type="number" onChange={handleQuantityChange} value={quantity} min="1"/>
 						<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
 							Add to Cart
 						</button>
