@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../contexts/cartContext";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 function Checkout() {
 	const { cartItems, addItemToCart, addQuantity, subtractQuantity, deleteItem } = useContext(CartContext);
@@ -39,7 +40,7 @@ function Checkout() {
 		<>
 			<Navigation />
 			<div className="max-w-4xl mx-auto px-4">
-				<h1 className="text-3xl font-bold mt-5 mb-4">Checkout</h1>
+				<h1 className="text-3xl font-bold mt-10 mb-4">Checkout</h1>
 				{cartItems.length > 0 ? (
 					cartItems.map((item) => (
 						<div key={item.id} className="flex items-center justify-between border-b border-gray-300 py-4">
@@ -48,7 +49,7 @@ function Checkout() {
 								<div>
 									<h2 className="text-lg font-semibold">{item.title}</h2>
 									<div className="text-gray-600">Price: ${item.price}</div>
-									<div className="text-gray-600">Subtotal: ${item.price * item.quantity}</div>
+									<div className="text-gray-600">Subtotal: ${(Math.round((item.price * item.quantity) * 100)/ 100).toFixed(2)}</div>
 								</div>
 							</Link>
 							<div className="right-hand-opts flex justify-center gap-10">
@@ -77,23 +78,23 @@ function Checkout() {
 				)}
 
 				{cartItems.length > 0 && (
-					<div>
-						<div>
-							<h2 className="mt-5 font-semibold">TOTAL AMOUNT</h2>
-							<div>
-								$
-								{cartItems.reduce((acc, item) => {
-									const total = acc + item.price * item.quantity;
-									return total;
-								}, 0)}
-							</div>
+					<div className="mt-8">
+						<div className="bg-gray-100 p-4 rounded-md">
+							<h2 className="font-semibold">TOTAL AMOUNT</h2>
+							<div className="text-lg">$ {cartItems.reduce((acc, item) =>  acc + Math.round((item.price * item.quantity) * 100)/ 100, 0).toFixed(2)}</div>
 						</div>
-						<Link to="/shop" className="block mt-8 px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">
-							Continue Shopping
-						</Link>
+						<div className="mt-4 space-y-2">
+							<Link to="/shop" className="block px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">
+								Continue Shopping
+							</Link>
+							<a href="#" className="block px-4 py-2 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600" onClick={() => alert("Demo complete. You have successfully checked out!")}>
+								Checkout
+							</a>
+						</div>
 					</div>
 				)}
 			</div>
+			<Footer />
 		</>
 	);
 }

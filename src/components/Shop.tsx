@@ -4,6 +4,7 @@ import Item from "./Item";
 import Navigation from "./Navigation";
 import styles from "../styles/shop.module.scss";
 import { ItemContext } from "../contexts/itemContext";
+import Footer from "./Footer";
 
 function Shop() {
 	const { items, loading } = useContext(ItemContext);
@@ -16,10 +17,10 @@ function Shop() {
 				{id ? (
 					<Item itemId={id} />
 				) : loading ? (
-					<p className="text-center text-4xl ">Loading . . .</p>
+					<p className="text-center text-4xl mt-10">Loading . . .</p>
 				) : (
 					<>
-						<h1 className="text-center text-3xl font-bold mt-5 mb-8">Shop</h1>
+						<h1 className="text-center text-3xl font-bold mt-10 mb-8">Shop to your heart content!</h1>
 						<div className={styles.itemList}>
 							{items.length > 0 ? (
 								<>
@@ -40,6 +41,7 @@ function Shop() {
 					</>
 				)}
 			</main>
+			<Footer />
 		</div>
 	);
 }

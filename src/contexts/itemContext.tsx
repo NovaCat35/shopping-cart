@@ -19,7 +19,7 @@ export const ItemContext = createContext<ItemContextType>({
 	loading: true,
 });
 
-function ItemProvider({ children } : { children: React.ReactNode }) {
+function ItemProvider({ children }: { children: React.ReactNode }) {
 	const [items, setItems] = useState<Product[]>([]);
 	const [loading, setLoading] = useState(true);
 
@@ -32,8 +32,14 @@ function ItemProvider({ children } : { children: React.ReactNode }) {
 				return response.json();
 			})
 			.then((response) => {
-				console.log(response);
-				setItems(response);
+				// Format prices with double decimals
+				console.log(typeof response[0].price)
+				const formattedItems = response.map((item: Product) => ({
+					...item,
+					price: (Math.round(item.price * 100)/ 100).toFixed(2),
+				}));
+				console.log(formattedItems);
+				setItems(formattedItems);
 			})
 			.catch((error) => {
 				throw error; // Throw the error to be handled by the route
