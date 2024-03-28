@@ -9,6 +9,7 @@ A mock e-commerce website. The goal of this project is to utilize newly learned 
 - SCSS module and tailwind
 
 ## Libraries 📚
+
 ```
    npm install uuidv4
    npm install --save prop-types
@@ -32,5 +33,7 @@ A mock e-commerce website. The goal of this project is to utilize newly learned 
 > Make sure you config the above in package.json and vite.config respectively
 
 ## Image Sources 🌅
+
 - https://www.pexels.com/
 - https://unsplash.com/
+- https://www.vexels.com/png-svg/preview/188314/aloha-flower-hawaiian-lettering

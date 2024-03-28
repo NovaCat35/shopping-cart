@@ -49,7 +49,7 @@ function Checkout() {
 								<div>
 									<h2 className="text-lg font-semibold">{item.title}</h2>
 									<div className="text-gray-600">Price: ${item.price}</div>
-									<div className="text-gray-600">Subtotal: ${(Math.round((item.price * item.quantity) * 100)/ 100).toFixed(2)}</div>
+									<div className="text-gray-600">Subtotal: ${(Math.round(item.price * item.quantity * 100) / 100).toFixed(2)}</div>
 								</div>
 							</Link>
 							<div className="right-hand-opts flex justify-center gap-10">
@@ -70,7 +70,7 @@ function Checkout() {
 					))
 				) : (
 					<div className="text-center">
-						<p>Your shopping cart is empty.</p>
+						<p className="text-lg">Your shopping cart is empty.</p>
 						<Link to="/shop" className="block mt-8 px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">
 							Shop Now
 						</Link>
@@ -81,7 +81,7 @@ function Checkout() {
 					<div className="mt-8">
 						<div className="bg-gray-100 p-4 rounded-md">
 							<h2 className="font-semibold">TOTAL AMOUNT</h2>
-							<div className="text-lg">$ {cartItems.reduce((acc, item) =>  acc + Math.round((item.price * item.quantity) * 100)/ 100, 0).toFixed(2)}</div>
+							<div className="text-lg">$ {cartItems.reduce((acc, item) => acc + Math.round(item.price * item.quantity * 100) / 100, 0).toFixed(2)}</div>
 						</div>
 						<div className="mt-4 space-y-2">
 							<Link to="/shop" className="block px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">
