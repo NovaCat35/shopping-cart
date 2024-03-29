@@ -11,6 +11,8 @@ Ahola! This is a demo e-commerce website. The goal of this project is to utilize
 ## Goal and Challenges 🔥
 I am going into this project to fully solidify React concepts of using hooks, contexts, routers, and adding key features such as filtering, pagination nav, search, and other easy access tools. 
 
+Originally had issue connecting the search logic with the shop logic. I had discover helpful hooks like useSearchParams that will allow me to query the url and retrieve info from it
+
 ...I'll add more to this section as I progress on with this project.
 
 ## Libraries 📚

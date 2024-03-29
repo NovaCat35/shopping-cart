@@ -50,9 +50,10 @@ function ItemProvider({ children }: { children: React.ReactNode }) {
 	}, []);
 
 	const searchItem = (query: string): Product[] => {
-		return items.filter((item) => {
-			item.title.toLowerCase().includes(query.toLowerCase()) || item.description.toLowerCase().includes(query.toLowerCase());
-		});
+		const filteredItems = items.filter((item) => item.title.toLowerCase().includes(query.toLowerCase()) || item.description.toLowerCase().includes(query.toLowerCase()));
+
+		console.log("Filtered Items:", filteredItems);
+		return filteredItems;
 	};
 
 	return <ItemContext.Provider value={{ items, loading, searchItem }}>{children}</ItemContext.Provider>;
