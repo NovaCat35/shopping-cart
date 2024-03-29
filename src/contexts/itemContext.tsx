@@ -12,11 +12,13 @@ export type Product = {
 type ItemContextType = {
 	items: Product[];
 	loading: boolean;
+	searchItem: (query: string) => Product[];
 };
 
 export const ItemContext = createContext<ItemContextType>({
 	items: [],
 	loading: true,
+	searchItem: () => [],
 });
 
 function ItemProvider({ children }: { children: React.ReactNode }) {
@@ -33,10 +35,10 @@ function ItemProvider({ children }: { children: React.ReactNode }) {
 			})
 			.then((response) => {
 				// Format prices with double decimals
-				console.log(typeof response[0].price)
+				console.log(typeof response[0].price);
 				const formattedItems = response.map((item: Product) => ({
 					...item,
-					price: (Math.round(item.price * 100)/ 100).toFixed(2),
+					price: (Math.round(item.price * 100) / 100).toFixed(2),
 				}));
 				console.log(formattedItems);
 				setItems(formattedItems);
@@ -47,7 +49,13 @@ function ItemProvider({ children }: { children: React.ReactNode }) {
 			.finally(() => setLoading(false));
 	}, []);
 
-	return <ItemContext.Provider value={{ items, loading }}>{children}</ItemContext.Provider>;
+	const searchItem = (query: string): Product[] => {
+		return items.filter((item) => {
+			item.title.toLowerCase().includes(query.toLowerCase()) || item.description.toLowerCase().includes(query.toLowerCase());
+		});
+	};
+
+	return <ItemContext.Provider value={{ items, loading, searchItem }}>{children}</ItemContext.Provider>;
 }
 
 export default ItemProvider;

@@ -1,12 +1,17 @@
-# Shopping Cart
+# Shopping Cart [Ahola Awesome Store]
 
-A mock e-commerce website. The goal of this project is to utilize newly learned concepts and best practices such as react routes, testing frameworks, type checking, and api data fetching.
+Ahola! This is a demo e-commerce website. The goal of this project is to utilize newly learned concepts and best practices such as react routes, testing frameworks, type checking, and api data fetching.
 
 ## Build With 🛠️
 
 - React + Vite
 - TypeScript
 - SCSS module and tailwind
+
+## Goal and Challenges 🔥
+I am going into this project to fully solidify React concepts of using hooks, contexts, routers, and adding key features such as filtering, pagination nav, search, and other easy access tools. 
+
+...I'll add more to this section as I progress on with this project.
 
 ## Libraries 📚
 
