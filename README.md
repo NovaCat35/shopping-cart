@@ -44,3 +44,4 @@ Originally had issue connecting the search logic with the shop logic. I had disc
 - https://www.pexels.com/
 - https://unsplash.com/
 - https://www.vexels.com/png-svg/preview/188314/aloha-flower-hawaiian-lettering
+- https://pixabay.com/vectors/watercolor-background-wallpaper-4117017/

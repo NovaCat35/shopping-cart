@@ -1,6 +1,5 @@
 import React from "react";
 import searchIcon from "../assets/search.svg";
-// import styles from "../styles/shop.module.scss";
 
 interface ModalProps {
 	handleToggleModal: () => void;

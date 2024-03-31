@@ -35,14 +35,14 @@ function Search({setModalActive} : SearchProp) {
 			<div className="hidden md:flex items-center relative">
 				<input type="text" onChange={handleChange} value={searchQuery} placeholder="Search..." className="w-80 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none" />
 				<button onClick={handleSearch} className="flex items-center justify-center bg-[#02afe6] rounded-r-md w-12 h-[42px]" type="button">
-					<img src={searchIcon} alt="Search icon" className={`${styleImg.filterImg}`} />
+					<img src={searchIcon} alt="Search icon" className={`${styleImg.filter_img_white}`} />
 				</button>
 			</div>
 
 			{/* Search icon for smaller screens */}
 			<div className="md:hidden flex items-center justify-center">
 				<button onClick={handleToggleModal} className="flex items-center justify-center bg-[#02afe6] text-gray-600 rounded-md w-10 h-10" type="button">
-					<img src={searchIcon} alt="Search icon" className={`${styleImg.filterImg}`} />
+					<img src={searchIcon} alt="Search icon" className={`${styleImg.filter_img_white}`} />
 				</button>
 			</div>
 

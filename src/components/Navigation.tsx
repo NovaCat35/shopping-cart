@@ -12,7 +12,8 @@ function Navigation() {
 	useEffect(() => {
 		const controlNavbar = () => {
 			if (typeof window !== "undefined") {
-				if (window.scrollY > lastScrollY && !modalActive) { // we can't hide navbar if modal is active
+				if (window.scrollY > lastScrollY && !modalActive) {
+					// we can't hide navbar if modal is active
 					// if scrolling down, hide the navbar
 					setShow(false);
 				} else {
@@ -35,19 +36,19 @@ function Navigation() {
 	}, [lastScrollY]);
 
 	return (
-		<nav className={`bg-gray-900 px-3 py-3 flex justify-between items-center sticky top-0 z-10 transition-transform duration-300 transform ${show ? "translate-y-0" : "-translate-y-full"}`}>
+		<nav className={`z-20 bg-white bg-opacity-40 px-3 py-3 flex justify-between items-center sticky top-0 z-10 transition-transform duration-300 transform ${show ? "translate-y-0" : "-translate-y-full"}`}>
 			<div className="left-side flex justify-center items-center gap-5">
 				<img className="w-20" src={shopLogo} alt="shop logo" />
 			</div>
 			<div className="right-side flex items-center gap-3">
-				<Link to="/" className="text-white px-4 py-2 hover:bg-gray-700">
+				<Link to="/" className="text-black rounded-md px-4 py-2 hover:bg-gray-600 hover:text-white font-bold transition ease-in duration-200">
 					Home
 				</Link>
-				<Link to="/shop" className="text-white px-4 py-2 hover:bg-gray-700">
+				<Link to="/shop" className="text-black rounded-md px-4 py-2 hover:bg-gray-600 hover:text-white font-bold transition ease-in duration-200">
 					Shop
 				</Link>
-				<div className="divider h-6 w-px bg-white mr-3"></div>
-				<Search setModalActive={setModalActive}/>
+				<div className="divider h-6 w-px bg-black mr-3"></div>
+				<Search setModalActive={setModalActive} />
 				<ShoppingCart />
 			</div>
 		</nav>

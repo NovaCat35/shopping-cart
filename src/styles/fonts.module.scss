@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Mono:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+$font-courier-code: "Courier Prime", Arial, Helvetica, monospace;
+$font-roboto-mono: "Roboto Mono", "Courier", monospace;
+$font-noto-mono: "Noto Sans Mono", monospace;
+$font-raleway: "Raleway", sans-serif;
+
+.header_font {
+	font-family: $font-raleway;
+}
+
+.description_font {
+	font-family: $font-raleway;
+}
+
+.typewriter_font {
+	font-family: $font-courier-code;
+}
+
+.link_font {
+	font-family: $font-roboto-mono;
+	color: rgb(224, 224, 224);
+}

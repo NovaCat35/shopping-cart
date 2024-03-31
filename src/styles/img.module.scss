@@ -1,3 +1,6 @@
-.filterImg {
+.filter_img_black {
+	filter: invert(6%) sepia(4%) saturate(4077%) hue-rotate(177deg) brightness(99%) contrast(86%);
+}
+.filter_img_white {
 	filter: invert(99%) sepia(4%) saturate(17%) hue-rotate(80deg) brightness(105%) contrast(100%);
 }

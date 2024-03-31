@@ -35,12 +35,10 @@ function ItemProvider({ children }: { children: React.ReactNode }) {
 			})
 			.then((response) => {
 				// Format prices with double decimals
-				console.log(typeof response[0].price);
 				const formattedItems = response.map((item: Product) => ({
 					...item,
 					price: (Math.round(item.price * 100) / 100).toFixed(2),
 				}));
-				console.log(formattedItems);
 				setItems(formattedItems);
 			})
 			.catch((error) => {

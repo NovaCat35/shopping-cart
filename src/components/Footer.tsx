@@ -1,14 +1,14 @@
 import githubSvg from "../assets/github.svg";
-import footerStyle from "../styles/footer.module.scss";
+import footerStyle from "../styles/fonts.module.scss";
 
 function Footer() {
 	return (
-		<footer className="text-center bg-gray-900 text-white py-8 px-4 mt-20">
+		<footer className="text-center bg-gray-900 text-white py-8 px-4 mt-10">
 			<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
 				{/* Company */}
 				<div>
 					<h3 className="text-lg font-bold mb-4">COMPANY</h3>
-					<ul className={`space-y-2 ${footerStyle.links}`}>
+					<ul className={`space-y-2 ${footerStyle.link_font}`}>
 						<li>
 							<a href="#" className="hover:text-gray-300 hover:underline">
 								Our Story
@@ -35,7 +35,7 @@ function Footer() {
 				{/* Brand */}
 				<div>
 					<h3 className="text-lg font-semibold mb-4">BRAND</h3>
-					<ul className={`space-y-2 ${footerStyle.links}`}>
+					<ul className={`space-y-2 ${footerStyle.link_font}`}>
 						<li>
 							<a href="#" className="hover:text-gray-300 hover:underline">
 								Style & Fit
@@ -67,7 +67,7 @@ function Footer() {
 				{/* Help */}
 				<div>
 					<h3 className="text-lg font-semibold mb-4">HELP</h3>
-					<ul className={`space-y-2 ${footerStyle.links}`}>
+					<ul className={`space-y-2 ${footerStyle.link_font}`}>
 						<li>
 							<a href="#" className="hover:text-gray-300 hover:underline">
 								Shipping & Returns
@@ -99,7 +99,7 @@ function Footer() {
 
 			{/* Contact Info */}
 			<div className="max-w-7xl mx-auto mt-8 border-t border-gray-700 pt-4">
-				<div className="flex items-center justify-center space-x-10">
+				<div className="flex items-center justify-center flex-wrap gap-x-10 gap-y-5">
 					<a href="#" className="text-white border border-white rounded px-3 py-1 hover:border-gray-300 hover:text-gray-300">
 						<i className="fas fa-phone-alt"></i> (000)-AHOLA
 					</a>
@@ -115,19 +115,19 @@ function Footer() {
 			{/* Legal */}
 			<div className="max-w-7xl mx-auto mt-8 flex items-center justify-center">
 				<div className={`flex items-center justify-center space-x-8 flex-wrap ${footerStyle.links}`}>
-					<a href="#" className="text-white hover:text-gray-300 hover:underline">
+					<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
 						Privacy
 					</a>
-					<a href="#" className="text-white hover:text-gray-300 hover:underline">
+					<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
 						Accessibility
 					</a>
-					<a href="#" className="text-white hover:text-gray-300 hover:underline">
+					<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
 						Terms of Service
 					</a>
-					<a href="#" className="text-white hover:text-gray-300 hover:underline">
+					<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
 						Refund Policy
 					</a>
-					<a href="#" className="text-white hover:text-gray-300 hover:underline">
+					<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
 						Conformity
 					</a>
 				</div>

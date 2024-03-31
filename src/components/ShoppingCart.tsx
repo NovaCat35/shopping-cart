@@ -9,7 +9,7 @@ function ShoppingCart() {
 
 	return (
 		<Link to="/checkout" className="flex items-center text-white">
-			<img src={shoppingCart} alt="shopping cart" className={`w-6 h-6 mr-2 ${styles.filterImg}`} />
+			<img src={shoppingCart} alt="shopping cart" className={`w-6 h-6 mr-2 ${styles.filter_img_black}`} />
 			{cartItems.length > 0 && (
 				<p className="cart-count bg-blue-500 text-xs rounded-full px-2 py-1">
 					{cartItems.length}
