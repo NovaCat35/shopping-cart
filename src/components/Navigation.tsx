@@ -36,7 +36,7 @@ function Navigation() {
 	}, [lastScrollY]);
 
 	return (
-		<nav className={`z-20 bg-white bg-opacity-50 px-3 py-3 flex justify-between items-center sticky top-0 z-10 transition-transform duration-300 transform ${show ? "translate-y-0" : "-translate-y-full"}`}>
+		<nav className={`z-20 bg-gray-100 bg-opacity-70 px-3 py-3 mb-3 flex justify-between items-center sticky top-0 z-10 transition-transform duration-300 transform ${show ? "translate-y-0" : "-translate-y-full"}`}>
 			<div className="left-side flex justify-center items-center gap-5">
 				<img className="w-20" src={shopLogo} alt="shop logo" />
 			</div>

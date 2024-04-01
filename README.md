@@ -2,6 +2,15 @@
 
 Ahola! This is a demo e-commerce website. The goal of this project is to utilize newly learned concepts and best practices such as react routes, testing frameworks, type checking, and api data fetching.
 
+⚠️ Work in progress.
+
+## Features
+- Search tool
+- Filter option
+- Customized webpages and info
+- Checkout page
+- Pagination navigation (to-do)
+
 ## Build With 🛠️
 
 - React + Vite
@@ -12,7 +21,7 @@ Ahola! This is a demo e-commerce website. The goal of this project is to utilize
 
 I am going into this project to fully solidify React concepts of using hooks, contexts, routers, and adding key features such as filtering, pagination nav, search, and other easy access tools.
 
-Originally had issue connecting the search logic with the shop logic. I had discover helpful hooks like useSearchParams that will allow me to query the url and retrieve info from it
+Some issues that came up was connecting the search logic with the shop filter logic. While I had discovered helpful hooks like useSearchParams that will allow me to query the url and retrieve info from it, that also meant my filter would reset each time. Ultimately I was able to connect the two logic with using a context that allows both components to better flow logically and hide abstractions.
 
 ...I'll add more to this section as I progress on with this project.
 

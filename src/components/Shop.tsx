@@ -16,7 +16,6 @@ function Shop() {
 
 	// Allow search query to generate new list base on search query and filter setting
 	useEffect(() => {
-		console.log(searchQuery)
 		const filteredItems = searchItem(searchQuery);
 		const filteredItemsWithSelectedFilter = filterItems(selectedFilterRef.current, filteredItems);
 		setDisplayedItems(filteredItemsWithSelectedFilter);
@@ -56,7 +55,7 @@ function Shop() {
 							{displayedItems.length > 0 ? (
 								<>
 									{displayedItems.map((item) => (
-										<Link className="relative text-center border-4 px-5 py-10 rounded-md overflow-hidden hover:shadow-lg transition duration-300 hover:border-[#10a7de]" key={item.id} to={`/shop/${item.id}`}>
+										<Link className="relative text-center border-8 px-5 py-10 rounded-md overflow-hidden hover:shadow-lg transition duration-300 hover:border-[#10a7de]" key={item.id} to={`/shop/${item.id}`}>
 											<div className="flex items-center justify-center mb-2">
 												<img className="w-40 object-cover" src={item.image} alt="item picture" />
 											</div>{" "}
