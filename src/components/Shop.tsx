@@ -16,6 +16,7 @@ function Shop() {
 
 	// Allow search query to generate new list base on search query and filter setting
 	useEffect(() => {
+		console.log(searchQuery)
 		const filteredItems = searchItem(searchQuery);
 		const filteredItemsWithSelectedFilter = filterItems(selectedFilterRef.current, filteredItems);
 		setDisplayedItems(filteredItemsWithSelectedFilter);

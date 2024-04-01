@@ -5,15 +5,14 @@ import styleImg from "../styles/img.module.scss";
 import Modal from "./Modal";
 
 interface SearchProp {
-   setModalActive: React.Dispatch<React.SetStateAction<boolean>>;
+	setModalActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function Search({setModalActive} : SearchProp) {
+function Search({ setModalActive }: SearchProp) {
 	const [showModal, setShowModal] = useState(false);
-   const [searchParams, setSearchParams] = useSearchParams();
-   const [searchQuery, setSearchQuery] = useState(searchParams.get("search") || "");
-   const navigate = useNavigate();
-
+	const [searchParams, setSearchParams] = useSearchParams();
+	const [searchQuery, setSearchQuery] = useState(searchParams.get("search") || "");
+	const navigate = useNavigate();
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setSearchQuery(e.target.value);
@@ -21,23 +20,27 @@ function Search({setModalActive} : SearchProp) {
 
 	const handleToggleModal = () => {
 		setShowModal(!showModal);
-      setModalActive(!showModal);
+		setModalActive(!showModal);
 	};
 
-	const handleSearch = () => {
-		setSearchParams({'search': searchQuery})
-      navigate(`/shop?search=${encodeURIComponent(searchQuery)}`);
+	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setShowModal(false); // Close the modal if it's open
+		setSearchParams({ search: searchQuery });
+		navigate(`/shop?search=${searchQuery}`);
 	};
 
 	return (
 		<>
 			{/* Search bar with icon for larger screens */}
-			<div className="hidden md:flex items-center relative">
-				<input type="text" onChange={handleChange} value={searchQuery} placeholder="Search..." className="w-80 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none" />
-				<button onClick={handleSearch} className="flex items-center justify-center bg-[#02afe6] rounded-r-md w-12 h-[42px]" type="button">
-					<img src={searchIcon} alt="Search icon" className={`${styleImg.filter_img_white}`} />
-				</button>
-			</div>
+			<form className="commentForm" onSubmit={handleSearch}>
+				<div className="hidden md:flex items-center relative">
+					<input type="text" onChange={handleChange} value={searchQuery} placeholder="Search..." className="w-80 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none" />
+					<button type="submit" className="flex items-center justify-center bg-[#02afe6] rounded-r-md w-12 h-[42px]">
+						<img src={searchIcon} alt="Search icon" className={`${styleImg.filter_img_white}`} />
+					</button>
+				</div>
+			</form>
 
 			{/* Search icon for smaller screens */}
 			<div className="md:hidden flex items-center justify-center">

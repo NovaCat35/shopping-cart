@@ -61,35 +61,36 @@ function ItemProvider({ children }: { children: React.ReactNode }) {
 	};
 
 	const filterItems = (filterCondition: string, currItems: Product[]) => {
+		// Set default filter condition to "Popularity" if filterCondition is not provided or is null/empty
+		if (!filterCondition) {
+			filterCondition = "Popularity";
+		}
+
 		switch (filterCondition) {
 			case "Popularity": {
-				console.log("Popularity");
 				// Sort by rating count in descending order
 				const sortedRate = currItems.sort((item1, item2) => item2.rating.rate - item1.rating.rate);
 				return sortedRate;
 			}
 			case "LTH": {
-				console.log("LTH");
 				// Sort by price: Low to High
 				const sortedPrice = currItems.sort((item1, item2) => item1.price - item2.price);
 				console.log(sortedPrice);
 				return sortedPrice;
 			}
 			case "HTL": {
-				console.log("HTL");
 				// Sort by price: High to Low
 				const sortedPrice = currItems.sort((item1, item2) => item2.price - item1.price);
-				console.log(sortedPrice);
-
 				return sortedPrice;
 			}
 			case "Alphabetical": {
 				// Sort by alphabetical order
-				const sortedAlpha = currItems.sort((item1, item2) => (item1.title > item2.title) ? 1 : (item2.title > item1.title) ? -1 : 0);
+				const sortedAlpha = currItems.sort((item1, item2) => (item1.title > item2.title ? 1 : item2.title > item1.title ? -1 : 0));
 				return sortedAlpha;
 			}
 			case "ReverseAlpha": {
-				const sortedAlpha = currItems.sort((item1, item2) => (item1.title < item2.title) ? 1 : (item2.title < item1.title) ? -1 : 0);
+				// Sort by reverse alphabetical order
+				const sortedAlpha = currItems.sort((item1, item2) => (item1.title < item2.title ? 1 : item2.title < item1.title ? -1 : 0));
 				return sortedAlpha;
 			}
 			default:
