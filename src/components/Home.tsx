@@ -39,7 +39,7 @@ function Home() {
 						</div>
 					</div>
 					<p className={`${fontStyles.header_font} text-3xl mb-8`}>Where awesome finds its place.</p>
-					<Link to="/shop" className="text-white text-xl rounded-md border-2 border-gray-600 bg-[#566a84] px-6 py-3 hover:bg-[#39a0db] hover:border-[#3494ca] font-bold transition ease-in-out duration-300">
+					<Link to="/shop" className={`${styles.shadow_skyblue} text-white text-xl rounded-md border-2 border-[#405269] bg-[#566b84] px-6 py-3 hover:bg-[#39a0db] hover:border-[#3494ca] font-bold transition ease-in-out duration-300`}>
 						Shop Now
 					</Link>
 				</div>
