@@ -56,15 +56,6 @@ function Home() {
 						</Link>
 					</div>
 				</div>
-				{/* <div className="bg-white customer-info relative flex p-10">
-					<div className="w-[700px] h-auto overflow-hidden">
-						<img className="w-full object-cover" src={ladyShoppingImg} alt="lady shopping" />
-					</div>
-					<div className="flex flex-col pl-5">
-						<h2 className="text-3xl font-bold mb-4">Latest Fashion Trends</h2>
-						<p className="text-lg overflow-y-auto max-w-[500px]">Welcome to our spectacular store, where your fashion dreams come true! Step into a world of endless possibilities and discover the latest and hottest trends of the season. Whether you're looking for stylish outfits that turn heads or accessories that make a bold statement, we've got it all and more at our awesome store! Dive into a treasure trove of fashion-forward choices that will elevate your wardrobe to new heights. From casual chic to glamorous evening wear, our curated collection has something for every style and occasion. Explore our exclusive range of designer pieces, must-have essentials, and unique accessories that will add a touch of magic to your look. But that's not all! Shopping with us is not just about finding great fashion; it's about embracing a lifestyle of elegance, confidence, and self-expression. Our friendly and knowledgeable team is here to guide you every step of the way, ensuring that your shopping experience is as delightful as the treasures you'll discover. Join us on this exciting fashion journey and let our awesome store be your ultimate destination for all things fabulous!</p>
-					</div>
-				</div> */}
 
 				<div className="bg-white customer-info relative flex p-10">
 					<div className="flex flex-col flex-grow items-center h-full pr-10">
