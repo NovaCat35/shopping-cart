@@ -6,6 +6,7 @@ export type Product = {
 	price: number;
 	image: string;
 	description: string;
+	category: string;
 	quantity: number;
 	rating: { rate: number; count: number };
 };
@@ -14,6 +15,7 @@ type ItemContextType = {
 	items: Product[];
 	loading: boolean;
 	searchItem: (query: string) => Product[];
+	searchCategory: (query: string) => Product[];
 	filterItems: (filterCondition: string, currItems: Product[]) => Product[];
 };
 
@@ -21,6 +23,7 @@ export const ItemContext = createContext<ItemContextType>({
 	items: [],
 	loading: true,
 	searchItem: () => [],
+	searchCategory: () => [],
 	filterItems: () => [],
 });
 
@@ -55,10 +58,15 @@ function ItemProvider({ children }: { children: React.ReactNode }) {
 	const searchItem = (query: string): Product[] => {
 		const filteredItems = items.filter((item) => item.title.toLowerCase().includes(query.toLowerCase()) || item.description.toLowerCase().includes(query.toLowerCase()));
 
-		console.log("Filtered Items:", filteredItems);
 		filterList.current = filteredItems;
 		return filterList.current;
 	};
+
+	const searchCategory = (category: string): Product[] => {
+		const filteredItems = items.filter((item) => item.category == category);
+		filterList.current = filteredItems;
+		return filteredItems
+	}
 
 	const filterItems = (filterCondition: string, currItems: Product[]) => {
 		// Set default filter condition to "Popularity" if filterCondition is not provided or is null/empty
@@ -98,7 +106,7 @@ function ItemProvider({ children }: { children: React.ReactNode }) {
 		}
 	};
 
-	return <ItemContext.Provider value={{ items, loading, searchItem, filterItems }}>{children}</ItemContext.Provider>;
+	return <ItemContext.Provider value={{ items, loading, searchItem, searchCategory, filterItems }}>{children}</ItemContext.Provider>;
 }
 
 export default ItemProvider;
