@@ -1,8 +1,10 @@
 # Shopping Cart [Ahola Awesome Store]
 
-Ahola! This is a demo e-commerce website. The goal of this project is to utilize newly learned concepts and best practices such as react routes, testing frameworks, type checking, and api data fetching.
-
+Ahola! This is a demo e-commerce website. This project aims to apply recently acquired knowledge and industry best practices, including React routing, testing frameworks, type checking, and fetching data from APIs. 
+ 
 ⚠️ Work in progress.
+
+<img width="1103" alt="Screenshot 2024-04-02 at 1 30 49 AM" src="https://github.com/NovaCat35/shopping-cart/assets/54908064/b8514170-920a-4e29-8b10-8b3323204a1a">
 
 ## Features
 - Search tool
