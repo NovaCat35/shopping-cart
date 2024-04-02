@@ -7,6 +7,7 @@ import fontStyles from "../styles/fonts.module.scss";
 import beachImg from "../assets/beach.jpeg";
 import { ItemContext } from "../contexts/itemContext";
 import Footer from "./Footer";
+import StarRating from "./StarRating";
 
 function Shop() {
 	const { items, loading, searchItem, filterItems } = useContext(ItemContext);
@@ -27,7 +28,7 @@ function Shop() {
 		const selectedFilter = e.target.value;
 		selectedFilterRef.current = selectedFilter; // Update the ref value
 		const filteredItems = filterItems(selectedFilterRef.current, displayedItems); // Use ref value in filterItems
-		setDisplayedItems(() => [...filteredItems]);
+		setDisplayedItems([...filteredItems]); // No need for a function here
 	};
 
 	return (
@@ -75,9 +76,9 @@ function Shop() {
 												<div className="flex items-center justify-center mb-2">
 													<img className="w-40 object-cover" src={item.image} alt="item picture" />
 												</div>{" "}
-												<h2 className="text-xl font-semibold mb-5">{item.title}</h2>
+												<h2 className="text-xl font-semibold mb-3">{item.title}</h2>
 												<p className="text-xl text-gray-700 absolute bottom-3 left-0 right-0 bg-slate-50 bg-opacity-80 px-3 py-1">${item.price}</p>
-												<p>Rating: {item.rating.rate}</p>
+												<StarRating rating={item.rating.rate} count={item.rating.count} />
 											</Link>
 										))}
 									</>
