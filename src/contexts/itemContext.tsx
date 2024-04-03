@@ -65,8 +65,8 @@ function ItemProvider({ children }: { children: React.ReactNode }) {
 	const searchCategory = (category: string): Product[] => {
 		const filteredItems = items.filter((item) => item.category == category);
 		filterList.current = filteredItems;
-		return filteredItems
-	}
+		return filteredItems;
+	};
 
 	const filterItems = (filterCondition: string, currItems: Product[]) => {
 		// Set default filter condition to "Popularity" if filterCondition is not provided or is null/empty

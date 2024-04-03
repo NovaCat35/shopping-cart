@@ -14,7 +14,8 @@ const Router = () => {
       },
       {
          path: "/shop/:id?",
-         element: <Shop />
+         element: <Shop />,
+         errorElement: <ErrorPage />,
       },
       {
          path: "/checkout",

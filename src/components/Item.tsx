@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ItemContext } from "../contexts/itemContext";
 import { CartContext } from "../contexts/cartContext";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +15,13 @@ function Item({ itemId }: ItemProps) {
 	const [quantity, setQuantity] = useState(1);
 	const navigate = useNavigate();
 
+	useEffect(() => {
+		// We want to make sure items is loaded up first (e.g. we refresh that page), so then we can check if item is found
+		if (items.length > 0 && !items.find((item) => item.id.toString() === itemId)) {
+			throw new Error("Item not found"); // Navigate to ERROR PAGE if item is not found
+		}
+	}, [itemId, items]);
+
 	const item = items.find((item) => item.id.toString() === itemId);
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -29,7 +36,7 @@ function Item({ itemId }: ItemProps) {
 		const value = parseInt(e.target.value);
 		setQuantity(value);
 	};
-	// pl-[150px] pr-[150px]
+
 	return (
 		<div className="p-10 ">
 			{item && (

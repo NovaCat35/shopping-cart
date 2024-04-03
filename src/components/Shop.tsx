@@ -21,7 +21,7 @@ function Shop() {
 
 	// Allow query to generate new filtered list based on the type of query(i.e. search or category) and further sort that list of filtered list
 	useEffect(() => {
-		// Reset
+		// Reset to include default ALL PRODUCTS
 		let filteredItems = items;
 		selectedCategory.current = "";
 
