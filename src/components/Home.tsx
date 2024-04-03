@@ -6,6 +6,10 @@ import ladyYellowBgImg from "../assets/lady-yellow-bg.jpeg";
 import flowerImg from "../assets/red_hibiscus.png";
 import turtleImg from "../assets/turtle.avif";
 import waterColorBg from "../assets/water-color-bg.png";
+import mensWearImg from "../assets/menswear.jpeg";
+import womensWearImg from "../assets/womenswear.jpeg";
+import electronicImg from "../assets/electronics.jpeg";
+import jewelryImg from "../assets/jewelry.avif";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import styles from "../styles/home.module.scss";
@@ -46,6 +50,25 @@ function Home() {
 			</div>
 
 			<main className="bg-[#ffe3e3] mt-[30px] pt-20">
+				<div className="cards-container flex justify-center gap-8 flex-wrap p-10 bg-gray-100">
+					<Link to="/shop?category=electronics" className="card w-[300px] h-[350px] relative overflow-hidden rounded-lg">
+						<img src={electronicImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="electronic background" />
+						<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>ELECTRONICS</h2>
+					</Link>
+					<Link to="/shop?category=men's clothing" className="card w-[300px] h-[350px] relative overflow-hidden rounded-lg">
+						<img src={mensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="men's clothing background" />
+						<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>MEN'S CLOTHING</h2>
+					</Link>
+					<Link to="/shop?category=women's clothing" className="card w-[300px] h-[350px] relative overflow-hidden rounded-lg">
+						<img src={womensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="women's clothing background" />
+						<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>WOMEN'S CLOTHING</h2>
+					</Link>
+					<Link to="/shop?category=jewelery" className="card w-[300px] h-[350px] relative overflow-hidden rounded-lg">
+						<img src={jewelryImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="jewelry background" />
+						<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>JEWELRY</h2>
+					</Link>
+				</div>
+
 				<div className={`${styles.customer_info} bg-white relative flex p-10`}>
 					<div className="w-[100vw] md:w-[730px] h-[500px] overflow-hidden">
 						<img className="w-full h-full mr-[5px] object-cover" src={ladyShoppingImg} alt="lady shopping" />

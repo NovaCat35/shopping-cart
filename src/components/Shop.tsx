@@ -23,7 +23,7 @@ function Shop() {
 	useEffect(() => {
 		// Reset
 		let filteredItems = items;
-		selectedCategory.current = ''; 
+		selectedCategory.current = "";
 
 		const categoryType = searchParams.get("category");
 		if (searchParams.get("search")) {
@@ -31,7 +31,7 @@ function Shop() {
 		} else if (categoryType) {
 			filteredItems = searchCategory(searchQuery);
 			selectedCategory.current = categoryType;
-		} 
+		}
 		const filteredItemsWithSelectedFilter = filterItems(selectedFilterRef.current, filteredItems);
 		setDisplayedItems(filteredItemsWithSelectedFilter);
 	}, [searchQuery, items, searchItem, filterItems, searchParams, searchCategory]);
@@ -68,12 +68,16 @@ function Shop() {
 						<main className={`${styles.main}`}>
 							<div className=" side-nav pl-5 pr-10 py-10">
 								<ul className="flex flex-col gap-5">
-									<li className={`border-4 px-3 py-1 ${fontStyles.typewriter_font} ${selectedCategory.current === '' ? "border-[orange]" : ""}`}>
-										<Link to="/shop">ALL PRODUCTS</Link>
+									<li>
+										<Link to="/shop" className={`flex border-4 px-3 py-1 ${fontStyles.typewriter_font} ${selectedCategory.current === "" ? "border-[orange]" : ""}`}>
+											ALL PRODUCTS
+										</Link>
 									</li>
 									{categories.map((category, index) => (
-										<li key={index} className={`border-4 px-3 py-1 ${fontStyles.typewriter_font} ${selectedCategory.current === category ? "border-[orange]" : ""}`}>
-											<Link to={`/shop?category=${category}`}>{category.toUpperCase()}</Link>
+										<li key={index}>
+											<Link to={`/shop?category=${category}`} className={`flex border-4 px-3 py-1 ${fontStyles.typewriter_font} ${selectedCategory.current === category ? "border-[orange]" : ""}`}>
+												{category.toUpperCase()}
+											</Link>
 										</li>
 									))}
 								</ul>
