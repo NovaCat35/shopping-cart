@@ -19,14 +19,14 @@ function Home() {
 	return (
 		<div className="text-center">
 			<Navigation />
-			<div className="banner bg-[#e2f1f4] w-full h-10 -mt-3 mb-7 "></div>
-			<div className={`${styles.intro_container} flex relative`}>
+			<div className="banner bg-[#e2f1f4] w-full h-10 -mt-3 "></div>
+			<div className={`${styles.intro_container} flex relative mt-7`}>
 				<img className="absolute left-1/2 transform -translate-x-1/2 z-[-40]" src={waterColorBg} alt="watercolor background" />
 				<div className={`relative md:w-1/2 pl-10`}>
-					<div className={`${styles.welcome_image1} absolute top-[85px] left-[280px] w-[320px] h-[320px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "3px 4px 10px 3px rgba(251, 198, 12, 0.5)" }}>
+					<div className={`${styles.welcome_image1} bg-[#fef733] absolute top-[85px] left-[280px] w-[320px] h-[320px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "3px 4px 10px 3px rgba(251, 198, 12, 0.5)" }}>
 						<img className="w-full h-full object-cover" src={ladyYellowBgImg} alt="girl yellow background" />
 					</div>
-					<div className={`${styles.welcome_image2} top-0 left-10 w-[350px] h-[350px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "2px 4px 6px 5px rgba(73, 161, 227, 0.5)" }}>
+					<div className={`${styles.welcome_image2} bg-[#4493b9] top-0 left-10 w-[350px] h-[350px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "2px 4px 6px 5px rgba(73, 161, 227, 0.5)" }}>
 						<img className="z-10 w-full h-auto object-cover mb-20" src={dogImg} alt="dog clothing" />
 					</div>
 				</div>
@@ -39,12 +39,12 @@ function Home() {
 					</h1>
 
 					<div className="w-full flex justify-center">
-						<div className={`${styles.welcome_image3} mb-5 w-[270px] h-[270px] overflow-hidden rounded-full `}>
+						<div className={`${styles.welcome_image3} bg-[#4493b9] mb-5 w-[270px] h-[270px] overflow-hidden rounded-full `}>
 							<img className="z-10 w-full h-auto object-cover mb-10" src={dogImg} alt="dog clothing" />
 						</div>
 					</div>
 					<p className={`${fontStyles.header_font} text-3xl mb-8`}>Where awesome finds its place.</p>
-					<Link to="/shop" className={`${styles.shadow_skyblue} text-white text-xl rounded-md border-2 border-[#405269] bg-[#566b84] px-6 py-3 hover:bg-[#39a0db] hover:border-[#3494ca] font-bold transition ease-in-out duration-300`}>
+					<Link to="/shop" className={`${styles.shadow_skyblue} text-white text-xl rounded-md border-2 border-[#d13f57] bg-[#e34b64] px-6 py-3 hover:bg-[#39a0db] hover:border-[#3494ca] font-bold transition ease-in-out duration-300`}>
 						Shop Now
 					</Link>
 				</div>

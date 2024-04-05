@@ -2,9 +2,9 @@
 
 Ahola! This is a demo e-commerce website that uses fake store api to populate the store site. Project aims to apply recently acquired knowledge and industry best practices, including React routing, testing frameworks, type checking, and fetching data from APIs. 
  
-⚠️ Work in progress.
+⚠️ Work in progress. 🌺
 
-<img width="1103" alt="Screenshot 2024-04-02 at 1 30 49 AM" src="https://github.com/NovaCat35/shopping-cart/assets/54908064/b8514170-920a-4e29-8b10-8b3323204a1a">
+<img width="1296" alt="Screenshot 2024-04-05 at 1 37 02 PM" src="https://github.com/NovaCat35/shopping-cart/assets/54908064/ba9264b8-f4a4-4559-8f3a-61ea03cc431d">
 
 ## Features 🚀
 - Search tool
