@@ -105,7 +105,7 @@ function Footer() {
 				{/* Contact Info */}
 				<div className="max-w-7xl mx-auto mt-8 border-t border-gray-700 pt-4">
 					<div className="flex items-center justify-center flex-wrap gap-x-10 gap-y-5">
-						<a href="#" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
+						<a href="/yolo" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
 							<img src={phoneSvg} alt="phone svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
 							(000)-AHOLA
 						</a>
@@ -113,7 +113,7 @@ function Footer() {
 							<img src={emailSvg} alt="email svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
 							support@AHOLA.org
 						</a>
-						<a href="#" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
+						<a href="/yolo" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
 							<img src={chatSvg} alt="chat svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
 							Chat with Us
 						</a>

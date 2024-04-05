@@ -22,14 +22,15 @@ function Home() {
 			<div className="banner bg-[#e2f1f4] w-full h-10 -mt-3 mb-7 "></div>
 			<div className={`${styles.intro_container} flex relative`}>
 				<img className="absolute left-1/2 transform -translate-x-1/2 z-[-40]" src={waterColorBg} alt="watercolor background" />
-				<div className={` relative md:w-1/2 pl-10`}>
-					<div className={`${styles.welcome_image1} absolute top-[85px] left-[280px] w-[320px] h-[320px] overflow-hidden rounded-full`}>
+				<div className={`relative md:w-1/2 pl-10`}>
+					<div className={`${styles.welcome_image1} absolute top-[85px] left-[280px] w-[320px] h-[320px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "3px 4px 10px 3px rgba(251, 198, 12, 0.5)" }}>
 						<img className="w-full h-full object-cover" src={ladyYellowBgImg} alt="girl yellow background" />
 					</div>
-					<div className={`${styles.welcome_image2}  top-0 left-10 w-[350px] h-[350px] overflow-hidden rounded-full `}>
+					<div className={`${styles.welcome_image2} top-0 left-10 w-[350px] h-[350px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "2px 4px 6px 5px rgba(73, 161, 227, 0.5)" }}>
 						<img className="z-10 w-full h-auto object-cover mb-20" src={dogImg} alt="dog clothing" />
 					</div>
 				</div>
+
 				<div className={`${styles.welcome_banner} md:w-1/2 `}>
 					<h1 className=" mt-2 mb-4">
 						<span className={`${styles.text_shadow} font-bold text-7xl md:text-8xl lg:text-9xl`}>AHOLA!</span> <br />

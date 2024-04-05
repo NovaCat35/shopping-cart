@@ -7,6 +7,11 @@
 .main {
 	padding: 10px 35px;
 	display: flex;
+	flex-direction: column;
+
+	@media screen and (min-width: 1024px) {
+		flex-direction: row;
+	}
 }
 
 .header {

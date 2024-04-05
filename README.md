@@ -36,6 +36,7 @@ Some issues that came up was connecting the search logic with the shop filter lo
    npm install -D tailwindcss postcss autoprefixer
    npx tailwindcss init -p
    npm install -D sass
+   npm install react-paginate
 ```
 
 > Don't forget to modify tailwind.config

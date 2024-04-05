@@ -7,7 +7,7 @@ import fontStyles from "../styles/fonts.module.scss";
 import beachImg from "../assets/beach.jpeg";
 import { ItemContext } from "../contexts/itemContext";
 import Footer from "./Footer";
-import StarRating from "./StarRating";
+import PaginatedItems from "./PaginatedItems";
 
 function Shop() {
 	const { items, loading, searchItem, searchCategory, filterItems } = useContext(ItemContext);
@@ -19,9 +19,13 @@ function Shop() {
 	const selectedFilterRef = useRef<string>(""); // Create a ref for selectedFilter
 	const categories = Array.from(new Set(items.map((item) => item.category)));
 
-	// Allow query to generate new filtered list based on the type of query(i.e. search or category) and further sort that list of filtered list
+	/**
+	 * We want to allow all search/category query (immediately after opening shop page)
+	 * to generate new filtered list based on the type of query.
+	 * Next, further sort that list base on filtered options.
+	 */
 	useEffect(() => {
-		// Reset to include default ALL PRODUCTS
+		// Reset to include default ALL PRODUCTS (because if we don't and user refresh page, we get)
 		let filteredItems = items;
 		selectedCategory.current = "";
 
@@ -96,25 +100,7 @@ function Shop() {
 										</select>
 									</div>
 								</div>
-
-								<div className={`item-list ${styles.itemList}`}>
-									{displayedItems.length > 0 ? (
-										<>
-											{displayedItems.map((item) => (
-												<Link className="relative text-center border-8 px-5 py-10 rounded-md overflow-hidden hover:shadow-lg transition duration-300 hover:border-[#10a7de]" key={item.id} to={`/shop/${item.id}`}>
-													<div className="flex items-center justify-center mb-2">
-														<img className="w-40 object-cover" src={item.image} alt="item picture" />
-													</div>{" "}
-													<h2 className="text-xl font-semibold mb-3">{item.title}</h2>
-													<p className="text-xl text-gray-700 absolute bottom-3 left-0 right-0 bg-slate-50 bg-opacity-80 px-3 py-1">${item.price}</p>
-													<StarRating rating={item.rating.rate} count={item.rating.count} />
-												</Link>
-											))}
-										</>
-									) : (
-										<p>No items available</p>
-									)}
-								</div>
+								<div className="displayed-items flex flex-col">{displayedItems.length > 0 ? <PaginatedItems displayedItems={displayedItems} /> : <p>No items available</p>}</div>
 							</div>
 						</main>
 					</>

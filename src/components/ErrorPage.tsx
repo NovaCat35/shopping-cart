@@ -12,7 +12,7 @@ function ErrorPage() {
 				<div className="w-[600px] h-[350px] overflow-hidden rounded-lg border-[#e86241] border-8">
 					<img src={errorImg} alt="Dog wearing clothes" className="w-full h-full object-cover" />
 				</div>
-				<p className="text-lg text-gray-700 mt-4 max-w-md text-center">Aw Shucks, looks like what you're looking for doesn't exist or is under construction. Try one of the links below!</p>
+				<p className="text-lg text-gray-700 mt-4 max-w-md text-center">Aw Shucks, looks like what you're looking for doesn't exist. Try one of the links below!</p>
 				<div className="flex gap-5 mt-5 mb-5">
 					<a href="/" className="border-[#e86241] text-xl border-2 rounded-md px-10 py-2 text-[#e86241] hover:underline">
 						Home

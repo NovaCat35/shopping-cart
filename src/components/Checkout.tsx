@@ -39,6 +39,8 @@ function Checkout() {
 	return (
 		<>
 			<Navigation />
+			<div className="banner bg-[#f5ad42] w-full h-5 -mt-3 border-b-4 border-[#d1800f]"></div>
+
 			<div className="max-w-4xl mx-auto px-4">
 				<h1 className="text-3xl font-bold mt-10 mb-4">Checkout</h1>
 				{cartItems.length > 0 ? (
@@ -71,7 +73,7 @@ function Checkout() {
 				) : (
 					<div className="text-center">
 						<p className="text-lg">Your shopping cart is empty.</p>
-						<Link to="/shop" className="block mt-8 px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">
+						<Link to="/shop" className="block mt-8 px-4 py-2 bg-[#16a4e0] text-white font-semibold rounded-md transition duration-300 ease-in-out hover:bg-[#1c91eb]">
 							Shop Now
 						</Link>
 					</div>
@@ -84,10 +86,10 @@ function Checkout() {
 							<div className="text-lg">$ {cartItems.reduce((acc, item) => acc + Math.round(item.price * item.quantity * 100) / 100, 0).toFixed(2)}</div>
 						</div>
 						<div className="mt-4 space-y-2">
-							<Link to="/shop" className="block px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">
+							<Link to="/shop" className="block px-4 py-2 bg-[#29a7e6] text-white font-semibold rounded-md transition duration-300 ease-in-out hover:bg-[#0484e6]">
 								Continue Shopping
 							</Link>
-							<a href="#" className="block px-4 py-2 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600" onClick={() => alert("Demo complete. You have successfully checked out!")}>
+							<a href="#" className="block px-4 py-2 bg-[#48ad18] text-white font-semibold rounded-md transition duration-300 ease-in-out hover:bg-[#09940b]" onClick={() => alert("Demo complete. You have successfully checked out!")}>
 								Checkout
 							</a>
 						</div>

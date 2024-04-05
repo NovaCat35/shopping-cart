@@ -1,0 +1,51 @@
+@import "./fonts.module.scss";
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 10px;
+	padding: 0;
+	margin-top: 40px;
+
+	li {
+		margin: 0 5px;
+		display: inline-block;
+
+		a {
+			font-family: $font-roboto-mono;
+			display: block;
+			padding: 8px 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			text-decoration: none;
+			color: #333;
+			transition: background-color 0.3s ease;
+			&:hover {
+				background-color: #f0f0f0;
+			}
+		}
+
+		&.previous,
+		&.next {
+			a {
+				font-family: $font-raleway;
+				color: rgb(246, 151, 19);
+				border: 2px solid rgb(246, 151, 19);
+			}
+		}
+
+		&.selected {
+			a {
+				background-color: #009dff;
+				color: #fff;
+				border-color: #007bff;
+			}
+		}
+
+		&.disabled {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	}
+}
