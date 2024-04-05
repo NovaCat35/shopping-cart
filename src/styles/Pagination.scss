@@ -30,8 +30,10 @@
 		&.next {
 			a {
 				font-family: $font-raleway;
-				color: rgb(246, 151, 19);
-				border: 2px solid rgb(246, 151, 19);
+				font-weight: 700;
+				color: white;
+				background-color: rgb(246, 151, 19);
+				border: 2px solid rgb(246, 133, 19);
 			}
 		}
 

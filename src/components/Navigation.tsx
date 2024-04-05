@@ -40,7 +40,7 @@ function Navigation() {
 	return (
 		<nav className={`z-20 bg-gray-100 bg-opacity-70 px-3 py-3 mb-3 flex justify-between items-center sticky top-0 z-10 transition-transform duration-300 transform ${show ? "translate-y-0" : "-translate-y-full"}`}>
 			<div className="left-side flex justify-center items-center gap-5">
-				<img className="w-20" src={shopLogo} alt="shop logo" />
+				<Link to='/'><img className="w-20" src={shopLogo} alt="shop logo" /></Link>
 			</div>
 			<div className="right-side flex items-center gap-3">
 				<Link to="/" className="text-black rounded-md px-4 py-2 hover:bg-[#566b84] hover:text-white font-bold transition ease-in duration-200">

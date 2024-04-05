@@ -1,17 +1,17 @@
 # Shopping Cart [Ahola Awesome Store]
 
-Ahola! This is a demo e-commerce website. This project aims to apply recently acquired knowledge and industry best practices, including React routing, testing frameworks, type checking, and fetching data from APIs. 
+Ahola! This is a demo e-commerce website that uses fake store api to populate the store site. Project aims to apply recently acquired knowledge and industry best practices, including React routing, testing frameworks, type checking, and fetching data from APIs. 
  
 ⚠️ Work in progress.
 
 <img width="1103" alt="Screenshot 2024-04-02 at 1 30 49 AM" src="https://github.com/NovaCat35/shopping-cart/assets/54908064/b8514170-920a-4e29-8b10-8b3323204a1a">
 
-## Features
+## Features 🚀
 - Search tool
-- Filter option
-- Customized webpages and info
-- Checkout page
-- Pagination navigation (to-do)
+- Cart
+- Product Sorter
+- Pagination
+- Category Filter 
 
 ## Build With 🛠️
 
@@ -21,11 +21,9 @@ Ahola! This is a demo e-commerce website. This project aims to apply recently ac
 
 ## Goal and Challenges 🔥
 
-I am going into this project to fully solidify React concepts of using hooks, contexts, routers, and adding key features such as filtering, pagination nav, search, and other easy access tools.
+I went into this project with the goal of mastering essential React concepts, including hooks, contexts, routers, and implementing key functionalities such as filtering, pagination navigation, search capabilities, and other user-friendly tools.
 
-Some issues that came up was connecting the search logic with the shop filter logic. While I had discovered helpful hooks like useSearchParams that will allow me to query the url and retrieve info from it, that also meant my filter would reset each time. Ultimately I was able to connect the two logic with using a context that allows both components to better flow logically and hide abstractions.
-
-...I'll add more to this section as I progress on with this project.
+During development, I encountered challenges in integrating the different sorting/filtering functionality as each search query, category selector, filter tool, and pagination called in a certain order to fully bring about a smooth user experience. While leveraging useful hooks like useSearchParams for URL querying and data retrieval, I faced further issues of filtering resets with each search. To overcome this, I established a shared context that facilitated seamless logic integration between components, ensuring a coherent flow and abstracting complexities. I also broke apart the logic behind pagination from the rest of the store page to work with a already filtered list of displayed items.
 
 ## Libraries 📚
 
