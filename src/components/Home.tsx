@@ -32,11 +32,22 @@ function Home() {
 				</div>
 
 				<div className={`${styles.welcome_banner} md:w-1/2 `}>
-					<h1 className=" mt-2 mb-4">
-						<span className={`${styles.text_shadow} font-bold text-7xl md:text-8xl lg:text-9xl`}>AHOLA!</span> <br />
-						<span className="tracking-widest text-5xl md:text-6xl lg:text-6xl">AWESOME </span>
-						<span className="font-thin tracking-widest text-5xl md:text-6xl lg:text-6xl">STORE</span>
-					</h1>
+					<div className={`${styles.main_title} mt-2 mb-4`}>
+						<h1 className={`${styles.text_shadow} ${styles.text_animation} font-bold text-7xl md:text-8xl lg:text-9xl`}>
+							<div className="letter-a">A</div>
+							<div className="letter-h">H</div>
+							<div className="letter-o">O</div>
+							<div className="letter-l">L</div>
+							<div className="letter-a2">A</div>
+							<div className="letter-exclamation">!</div>
+						</h1>
+						<div className={`${styles.sub_title_texts}`}>
+							<p className="tracking-widest text-5xl md:text-6xl">
+								AWESOME<span className="">&nbsp;</span>
+							</p>
+							<p className="font-thin tracking-widest text-5xl md:text-6xl ">STORE</p>
+						</div>
+					</div>
 
 					<div className="w-full flex justify-center">
 						<div className={`${styles.welcome_image3} bg-[#4493b9] mb-5 w-[270px] h-[270px] overflow-hidden rounded-full `}>
@@ -49,8 +60,9 @@ function Home() {
 					</Link>
 				</div>
 			</div>
+			<div className="banner bg-[#ffe3e3] mt-[30px] pt-20"></div>
 
-			<main className="bg-[#ffe3e3] mt-[30px] pt-20">
+			<main className="">
 				<div className="cards-container flex justify-center gap-8 flex-wrap p-10 bg-gray-100">
 					<Link to="/shop?category=electronics" className="card w-[300px] h-[350px] relative overflow-hidden rounded-lg">
 						<img src={electronicImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="electronic background" />
