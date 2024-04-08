@@ -1,6 +1,6 @@
 # Shopping Cart [Ahola Awesome Store]
 
-Ahola! This is a demo e-commerce website that uses fake store api to populate the store site. Project aims to apply recently acquired knowledge and industry best practices, including React routing, testing frameworks, type checking, and fetching data from APIs. 
+Ahola! This is a demo e-commerce website that uses fake store api to populate the store site. Project aims to apply recently acquired knowledge and industry best practices, including React routing, unit testing, type checking, and fetching data from APIs. 
  
 ⚠️ Work in progress. 🌺
 
@@ -18,6 +18,7 @@ Ahola! This is a demo e-commerce website that uses fake store api to populate th
 - React + Vite
 - TypeScript
 - SCSS module and tailwind
+- Testing: vitest
 
 ## Goal and Challenges 🔥
 
@@ -49,6 +50,7 @@ During development, I encountered challenges in integrating the different sortin
 ```
 
 > Make sure you config the above in package.json and vite.config respectively
+> Testing: npm test FileName.test.tsx
 
 ## Image Sources 🌅
 

@@ -25,20 +25,25 @@ function Shop() {
 	 * Next, further sort that list base on filtered options.
 	 */
 	useEffect(() => {
-		// Reset to include default ALL PRODUCTS (because if we don't and user refresh page, we get)
-		let filteredItems = items;
-		selectedCategory.current = "";
+		// Update displayedItems when items or loading state changes
+		if (!loading) {
+			let filteredItems = items;
+			selectedCategory.current = "";
 
-		const categoryType = searchParams.get("category");
-		if (searchParams.get("search")) {
-			filteredItems = searchItem(searchQuery);
-		} else if (categoryType) {
-			filteredItems = searchCategory(searchQuery);
-			selectedCategory.current = categoryType;
+			const categoryType = searchParams.get("category");
+			if (searchParams.get("search")) {
+				filteredItems = searchItem(searchQuery);
+			} else if (categoryType) {
+				filteredItems = searchCategory(searchQuery);
+				selectedCategory.current = categoryType;
+			}
+			const filteredItemsWithSelectedFilter = filterItems(selectedFilterRef.current, filteredItems);
+			console.log("FRICK");
+			console.log(items);
+			console.log(filteredItemsWithSelectedFilter);
+			setDisplayedItems(filteredItemsWithSelectedFilter);
 		}
-		const filteredItemsWithSelectedFilter = filterItems(selectedFilterRef.current, filteredItems);
-		setDisplayedItems(filteredItemsWithSelectedFilter);
-	}, [searchQuery, items, searchItem, filterItems, searchParams, searchCategory]);
+	}, [loading, items, searchItem, searchCategory, filterItems, searchQuery, searchParams]);
 
 	const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		const selectedFilter = e.target.value;
@@ -100,7 +105,7 @@ function Shop() {
 										</select>
 									</div>
 								</div>
-								<div className="displayed-items flex flex-col">{displayedItems.length > 0 ? <PaginatedItems displayedItems={displayedItems} /> : <p>No items available</p>}</div>
+								<div data-testid="displayed-items-section" className="displayed-items flex flex-col">{displayedItems.length > 0 ? <PaginatedItems displayedItems={displayedItems} /> : <p>No items available</p>}</div>
 							</div>
 						</main>
 					</>
