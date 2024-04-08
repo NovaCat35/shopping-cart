@@ -1,24 +1,25 @@
-# Shopping Cart [Ahola Awesome Store]
+### Project: Shopping Cart
 
-Ahola! This is a demo e-commerce website that uses fake store api to populate the store site. Project aims to apply recently acquired knowledge and industry best practices, including React routing, unit testing, type checking, and fetching data from APIs. 
- 
-⚠️ Work in progress. 🌺
+# AHOLA! AWESOME STORE
+Ahola and welcome to this mockup of an e-commerce website! Our website utilizes the [fake store API](https://fakestoreapi.com/) to showcase a wide range of products. The main goal of this project was to solidify the utilization of tools and components like React Router, type checking, API fetching, and the testing of UI elements using the React Testing Library and Vitest.
 
-<img width="1296" alt="Screenshot 2024-04-05 at 1 37 02 PM" src="https://github.com/NovaCat35/shopping-cart/assets/54908064/ba9264b8-f4a4-4559-8f3a-61ea03cc431d">
+**Demo:** [ahola-awesome-store.pages.dev](https://ahola-awesome-store.pages.dev/) 🌺
 
-## Features 🚀
+<img width="1008" alt="Screenshot 2024-04-08 at 7 51 40 PM" src="https://github.com/NovaCat35/shopping-cart/assets/54908064/c3c90436-cea6-4973-916d-7b5e3f806e94">
+
+## Features 🎯
 - Search tool
-- Cart
-- Product Sorter
-- Pagination
-- Category Filter 
+- Shopping Cart
+- Product Sorting Filter
+- Pagination Navigation
+- Category Selection  
 
 ## Build With 🛠️
 
 - React + Vite
 - TypeScript
 - SCSS module and tailwind
-- Testing: vitest
+- Unit Testing: vitest
 
 ## Goal and Challenges 🔥
 
