@@ -83,7 +83,7 @@ function Checkout() {
 					<div className="mt-8">
 						<div className="bg-gray-100 p-4 rounded-md">
 							<h2 className="font-semibold">TOTAL AMOUNT</h2>
-							<div className="text-lg">$ {cartItems.reduce((acc, item) => acc + Math.round(item.price * item.quantity * 100) / 100, 0).toFixed(2)}</div>
+							<div data-testid='total-price' className="text-lg">$ {cartItems.reduce((acc, item) => acc + Math.round(item.price * item.quantity * 100) / 100, 0).toFixed(2)}</div>
 						</div>
 						<div className="mt-4 space-y-2">
 							<Link to="/shop" className="block px-4 py-2 bg-[#29a7e6] text-white font-semibold rounded-md transition duration-300 ease-in-out hover:bg-[#0484e6]">

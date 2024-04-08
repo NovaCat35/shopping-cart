@@ -101,4 +101,20 @@ describe("Shop Component", () => {
 		expect(screen.getByText("WOMEN'S CLOTHING")).toBeInTheDocument();
 		expect(screen.getByText("JEWELRY")).toBeInTheDocument();
 	});
+
+	it("renders items", () => {
+		// Render the Shop component within the mocked context provider
+		render(
+			<BrowserRouter>
+				<MockedItemProvider>
+					<Shop />
+				</MockedItemProvider>
+			</BrowserRouter>
+		);
+
+		// Assert that items MUST be available
+		expect(screen.queryByText("No items available")).not.toBeInTheDocument();
+		// Assert at least one product is found (query by product's title)
+		expect(screen.getByText("Product 1")).toBeInTheDocument();
+	});
 });
