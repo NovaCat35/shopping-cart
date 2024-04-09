@@ -88,27 +88,27 @@
 	display: flex;
 	div {
 		&:first-child {
-			animation: slideAndPopFromBottom 0.8s ease-out 1.2s both; /* Adjusted animation with 0.8-second duration and 1.2s delay */
+			animation: slideAndPopFromBottom 0.8s ease-out 1.0s both; /* Adjusted animation with 0.8-second duration and 1.2s delay */
 		}
 
 		&:nth-child(2) {
-			animation: slideAndPopFromBottom 0.8s ease-out 1.4s both; /* Adjusted delay */
+			animation: slideAndPopFromBottom 0.8s ease-out 1.2s both; /* Adjusted delay */
 		}
 
 		&:nth-child(3) {
-			animation: slideAndPopFromBottom 0.8s ease-out 1.6s both; /* Adjusted delay */
+			animation: slideAndPopFromBottom 0.8s ease-out 1.4s both; /* Adjusted delay */
 		}
 
 		&:nth-child(4) {
-			animation: slideAndPopFromBottom 0.8s ease-out 1.8s both; /* Adjusted delay */
+			animation: slideAndPopFromBottom 0.8s ease-out 1.6s both; /* Adjusted delay */
 		}
 
 		&:nth-child(5) {
-			animation: slideAndPopFromBottom 0.8s ease-out 2s both; /* Adjusted delay */
+			animation: slideAndPopFromBottom 0.8s ease-out 1.8s both; /* Adjusted delay */
 		}
 
 		&:last-child {
-			animation: slideAndPopFromBottom 0.5s ease-out 2.2s both; /* Adjusted duration and delay */
+			animation: slideAndPopFromBottom 0.5s ease-out 2s both; /* Adjusted duration and delay */
 		}
 	}
 }
