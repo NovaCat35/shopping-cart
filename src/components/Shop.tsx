@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 import styles from "../styles/shop.module.scss";
 import fontStyles from "../styles/fonts.module.scss";
 import beachImg from "../assets/beach.jpeg";
+import hulaGif from "../assets/hula.gif";
 import { ItemContext } from "../contexts/itemContext";
 import Footer from "./Footer";
 import PaginatedItems from "./PaginatedItems";
@@ -57,7 +58,12 @@ function Shop() {
 				{id ? (
 					<Item itemId={id} />
 				) : loading ? (
-					<p className="text-center text-4xl mt-10">Loading . . .</p>
+					<div className={`${styles.loading_container} flex flex-col items-center mt-10 `}>
+						<div className="w-[300px] h-[300px] overflow-hidden rounded-full shadow-lg">
+							<img className="w-full h-full object-cover" src={hulaGif} alt="hula gif" />
+						</div>
+						<p className="text-center text-4xl mt-10 font-bold">LOADING . . .</p>
+					</div>
 				) : (
 					<>
 						<header className="bg-[#f2efee]">
@@ -102,7 +108,9 @@ function Shop() {
 										</select>
 									</div>
 								</div>
-								<div data-testid="displayed-items-section" className="displayed-items flex flex-col">{displayedItems.length > 0 ? <PaginatedItems displayedItems={displayedItems} /> : <p>No items available</p>}</div>
+								<div data-testid="displayed-items-section" className="displayed-items flex flex-col">
+									{displayedItems.length > 0 ? <PaginatedItems displayedItems={displayedItems} /> : <p>No items available</p>}
+								</div>
 							</div>
 						</main>
 					</>
