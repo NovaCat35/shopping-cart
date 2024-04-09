@@ -3,6 +3,7 @@ import { CartContext } from "../contexts/cartContext";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import styles from "../styles/checkout.module.scss";
 
 function Checkout() {
 	const { cartItems, addItemToCart, addQuantity, subtractQuantity, deleteItem } = useContext(CartContext);
@@ -45,7 +46,7 @@ function Checkout() {
 				<h1 className="text-3xl font-bold mt-10 mb-4">Checkout</h1>
 				{cartItems.length > 0 ? (
 					cartItems.map((item) => (
-						<div key={item.id} className="flex items-center justify-between border-b border-gray-300 py-4">
+						<div key={item.id} className={`${styles.item_details} flex  border-b border-gray-300 py-4`}>
 							<Link to={`/shop/${item.id}`} className="flex items-center space-x-4">
 								<img className="w-24 h-24 rounded-md" src={item.image} alt="item picture" />
 								<div>
@@ -83,7 +84,9 @@ function Checkout() {
 					<div className="mt-8">
 						<div className="bg-gray-100 p-4 rounded-md">
 							<h2 className="font-semibold">TOTAL AMOUNT</h2>
-							<div data-testid='total-price' className="text-lg">$ {cartItems.reduce((acc, item) => acc + Math.round(item.price * item.quantity * 100) / 100, 0).toFixed(2)}</div>
+							<div data-testid="total-price" className="text-lg">
+								$ {cartItems.reduce((acc, item) => acc + Math.round(item.price * item.quantity * 100) / 100, 0).toFixed(2)}
+							</div>
 						</div>
 						<div className="mt-4 space-y-2">
 							<Link to="/shop" className="block px-4 py-2 bg-[#29a7e6] text-white font-semibold rounded-md transition duration-300 ease-in-out hover:bg-[#0484e6]">

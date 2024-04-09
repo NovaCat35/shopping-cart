@@ -38,9 +38,6 @@ function Shop() {
 				selectedCategory.current = categoryType;
 			}
 			const filteredItemsWithSelectedFilter = filterItems(selectedFilterRef.current, filteredItems);
-			console.log("FRICK");
-			console.log(items);
-			console.log(filteredItemsWithSelectedFilter);
 			setDisplayedItems(filteredItemsWithSelectedFilter);
 		}
 	}, [loading, items, searchItem, searchCategory, filterItems, searchQuery, searchParams]);

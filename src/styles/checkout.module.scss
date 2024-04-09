@@ -1,0 +1,12 @@
+.item_details {
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 20px;
+	@media screen and (min-width: 780px) {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 5px;
+	}
+}
