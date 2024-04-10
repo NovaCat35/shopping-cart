@@ -10,7 +10,7 @@ interface ModalProps {
 function Modal({ handleToggleModal, onChange, onClick }: ModalProps) {
 	return (
 		<div className={`fixed inset-0 z-50 h-screen w-screen flex justify-center items-center bg-gray-900 bg-opacity-50`}>
-			<div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+			<div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-[90%]">
 				<div className="flex justify-between items-center mb-4">
 					<h3 className="text-lg font-semibold">Search</h3>
 					<button className="px-3 py-1 bg-gray-900 text-white rounded-md" onClick={handleToggleModal}>

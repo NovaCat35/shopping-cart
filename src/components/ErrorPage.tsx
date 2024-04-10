@@ -7,7 +7,7 @@ function ErrorPage() {
 		<div>
 			<Navigation />
 			<div className="banner bg-[#f5ad42] w-full h-5 -mt-3 border-b-4 border-[#d1800f]"></div>
-			<div className="flex flex-col items-center bg-gray-100 -mb-10">
+			<div className="flex flex-col items-center bg-gray-100  pb-10">
 				<h1 className="text-3xl font-bold text-[#e86241] mt-8 mb-5">404: YOLO!</h1>
 				<div className="w-[600px] h-[350px] overflow-hidden rounded-lg border-[#e86241] border-8">
 					<img src={errorImg} alt="Dog wearing clothes" className="w-full h-full object-cover" />

@@ -54,7 +54,7 @@ function Shop() {
 		<div className="main-container">
 			<Navigation />
 			<div className="banner bg-[#81b4c5] w-full h-5 -mt-3 border-b-4 border-[#2c8c99]"></div>
-			<>
+			<div className="shop-container mb-10">
 				{id ? (
 					<Item itemId={id} />
 				) : loading ? (
@@ -115,7 +115,7 @@ function Shop() {
 						</main>
 					</>
 				)}
-			</>
+			</div>
 			<Footer />
 		</div>
 	);

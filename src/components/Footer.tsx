@@ -7,7 +7,7 @@ import imgStyle from "../styles/img.module.scss";
 
 function Footer() {
 	return (
-		<footer className="text-center bg-[#566b84] text-white mt-10">
+		<footer className="text-center bg-[#566b84] text-white">
 			<div className="py-8 px-4 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
 				{/* Company */}
 				<div>

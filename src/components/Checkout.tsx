@@ -42,7 +42,7 @@ function Checkout() {
 			<Navigation />
 			<div className="banner bg-[#f5ad42] w-full h-5 -mt-3 border-b-4 border-[#d1800f]"></div>
 
-			<div className="max-w-4xl mx-auto px-4">
+			<div className="max-w-4xl mx-auto px-4 mb-10">
 				<h1 className="text-3xl font-bold mt-10 mb-4">Checkout</h1>
 				{cartItems.length > 0 ? (
 					cartItems.map((item) => (
