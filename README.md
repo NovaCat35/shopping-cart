@@ -43,7 +43,7 @@ During development, I encountered challenges in integrating the different sortin
 
 > Don't forget to modify tailwind.config
 
-## TESTING Installation Setups ⚙️
+## Unit Test Installation Setups ⚙️
 
 ```
    npm install vitest --save-dev
@@ -53,7 +53,8 @@ During development, I encountered challenges in integrating the different sortin
 ```
 
 > Make sure you config the above in package.json and vite.config respectively
-> Testing: c FileName.test.tsx
+> 
+> TESTING: npm test FileName.test.tsx
 
 ## Image Sources 🌅
 
