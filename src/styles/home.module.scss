@@ -1,3 +1,7 @@
+$primary: rgb(241, 25, 93);
+$secondary: rgb(255, 177, 59);
+$radialPrimarySecondary: linear-gradient($primary, $secondary);
+
 .welcome_image1 {
 	display: none;
 	@media screen and (min-width: 1090px) {
@@ -65,7 +69,7 @@
 }
 
 .text_shadow {
-	text-shadow: 2px 2px 5px #e0afaf;
+	text-shadow: 2px 2px 5px #fab1b1;
 }
 
 .customer_info {
@@ -88,7 +92,7 @@
 	display: flex;
 	div {
 		&:first-child {
-			animation: slideAndPopFromBottom 0.8s ease-out 1.0s both; /* Adjusted animation with 0.8-second duration and 1.2s delay */
+			animation: slideAndPopFromBottom 0.8s ease-out 1s both; /* Adjusted animation with 0.8-second duration and 1.2s delay */
 		}
 
 		&:nth-child(2) {
@@ -108,7 +112,15 @@
 		}
 
 		&:last-child {
-			animation: slideAndPopFromBottom 0.5s ease-out 2s both; /* Adjusted duration and delay */
+			animation: slideAndPopFromBottom 0.5s ease-out 2s both;
+			@media screen and (min-width: 1090px) {
+				text-shadow: none;
+				background: $radialPrimarySecondary;
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				filter: drop-shadow(2px 2px #f83281);
+			}
 		}
 	}
 }
@@ -130,6 +142,6 @@
 	}
 	100% {
 		transform: translateY(0) scale(1);
-		color: rgb(0, 0, 0); /* Final color */
+		color: black;
 	}
 }
