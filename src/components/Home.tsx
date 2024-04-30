@@ -64,7 +64,7 @@ function Home() {
 
 			<main className="mb-10">
 				<div className="relative">
-					<div className="cards-container flex justify-center gap-10 flex-wrap pt-20 lg:pb-[200px] pb-[100px] px-15 bg-gray-100">
+					<div className="cards-container flex justify-center gap-10 flex-wrap py-20 px-15 bg-gray-100">
 						<Link to="/shop?category=electronics" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
 							<img src={electronicImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="electronic background" />
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>ELECTRONICS</h2>

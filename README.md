@@ -6,7 +6,7 @@ Aloha and welcome to this mockup of an e-commerce website! Our website utilizes 
 
 **Demo:** [aloha-awesome-store.pages.dev](https://aloha-awesome-store.pages.dev/) 🌺
 
-<img width="1008" alt="Screenshot 2024-04-08 at 7 51 40 PM" src="https://github.com/NovaCat35/shopping-cart/assets/54908064/c3c90436-cea6-4973-916d-7b5e3f806e94">
+<img width="1245" alt="Screenshot 2024-04-30 at 4 49 42 PM" src="https://github.com/NovaCat35/shopping-cart/assets/54908064/7a0edc6c-7b76-49f5-9486-306663408849">
 
 ## Features 🎯
 
