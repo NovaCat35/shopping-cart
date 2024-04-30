@@ -107,11 +107,11 @@ function Footer() {
 					<div className="flex items-center justify-center flex-wrap gap-x-10 gap-y-5">
 						<a href="/yolo" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
 							<img src={phoneSvg} alt="phone svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
-							(000)-AHOLA
+							(000)-ALOHA
 						</a>
-						<a href="mailto:support@ahola.xyz" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
+						<a href="mailto:support@aloha.xyz" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
 							<img src={emailSvg} alt="email svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
-							support@AHOLA.org
+							support@ALOHA.org
 						</a>
 						<a href="/yolo" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
 							<img src={chatSvg} alt="chat svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
@@ -145,7 +145,7 @@ function Footer() {
 						<img src={githubSvg} alt="github logo" className="h-8 w-auto transform hover:rotate-[360deg] transition-transform duration-700 ease-in-out" />
 						<p className="text-gray-600">Developed by NovaCat35</p>
 					</a>
-					<div className="mt-4 text-gray-500">&copy; 2024 Ahola Awesome Store. All rights reserved.</div>
+					<div className="mt-4 text-gray-500">&copy; 2024 Aloha Awesome Store. All rights reserved.</div>
 				</div>
 			</div>
 		</footer>

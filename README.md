@@ -1,10 +1,10 @@
 ### Project: Shopping Cart
 
-# AHOLA! AWESOME STORE
+# ALOHA! AWESOME STORE
 
-Ahola and welcome to this mockup of an e-commerce website! Our website utilizes the [fake store API](https://fakestoreapi.com/) to showcase a wide range of products. The main goal of this project was to solidify the utilization of tools and components like React Router, type checking, API fetching, and the testing of UI elements using the React Testing Library and Vitest.
+Aloha and welcome to this mockup of an e-commerce website! Our website utilizes the [fake store API](https://fakestoreapi.com/) to showcase a wide range of products. The main goal of this project was to solidify the utilization of tools and components like React Router, type checking, API fetching, and the testing of UI elements using the React Testing Library and Vitest.
 
-**Demo:** [ahola-awesome-store.pages.dev](https://ahola-awesome-store.pages.dev/) 🌺
+**Demo:** [aloha-awesome-store.pages.dev](https://aloha-awesome-store.pages.dev/) 🌺
 
 <img width="1008" alt="Screenshot 2024-04-08 at 7 51 40 PM" src="https://github.com/NovaCat35/shopping-cart/assets/54908064/c3c90436-cea6-4973-916d-7b5e3f806e94">
 

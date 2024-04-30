@@ -35,9 +35,9 @@ function Home() {
 					<div className={`${styles.main_title} mt-2 mb-4`}>
 						<h1 className={`${styles.text_shadow} ${styles.text_animation} font-bold text-7xl md:text-8xl lg:text-9xl`}>
 							<div className="letter-a">A</div>
-							<div className="letter-h">H</div>
+							<div className="letter-h">L</div>
 							<div className="letter-o">O</div>
-							<div className="letter-l">L</div>
+							<div className="letter-l">H</div>
 							<div className="letter-a2">A</div>
 							<div className="letter-exclamation">!</div>
 						</h1>
@@ -63,23 +63,29 @@ function Home() {
 			<div className="banner bg-[#ffe3e3] mt-[30px] pt-20"></div>
 
 			<main className="mb-10">
-				<div className="cards-container flex justify-center gap-10 flex-wrap p-10 bg-gray-100">
-					<Link to="/shop?category=electronics" className="card w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-						<img src={electronicImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="electronic background" />
-						<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>ELECTRONICS</h2>
-					</Link>
-					<Link to="/shop?category=men's clothing" className="card w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-						<img src={mensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="men's clothing background" />
-						<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>MEN'S CLOTHING</h2>
-					</Link>
-					<Link to="/shop?category=women's clothing" className="card w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-						<img src={womensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="women's clothing background" />
-						<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>WOMEN'S CLOTHING</h2>
-					</Link>
-					<Link to="/shop?category=jewelery" className="card w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-						<img src={jewelryImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="jewelry background" />
-						<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>JEWELRY</h2>
-					</Link>
+				<div className="relative">
+					<div className="cards-container flex justify-center gap-10 flex-wrap pt-20 lg:pb-[200px] pb-[100px] px-15 bg-gray-100">
+						<Link to="/shop?category=electronics" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
+							<img src={electronicImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="electronic background" />
+							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>ELECTRONICS</h2>
+						</Link>
+						<Link to="/shop?category=men's clothing" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
+							<img src={mensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="men's clothing background" />
+							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>MEN'S CLOTHING</h2>
+						</Link>
+						<Link to="/shop?category=women's clothing" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
+							<img src={womensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="women's clothing background" />
+							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>WOMEN'S CLOTHING</h2>
+						</Link>
+						<Link to="/shop?category=jewelery" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
+							<img src={jewelryImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="jewelry background" />
+							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>JEWELRY</h2>
+						</Link>
+					</div>
+
+					<svg className="absolute bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+						<path fill="#a2d9ff" fill-opacity="1" d="M0,160L30,149.3C60,139,120,117,180,128C240,139,300,181,360,181.3C420,181,480,139,540,144C600,149,660,203,720,186.7C780,171,840,85,900,85.3C960,85,1020,171,1080,192C1140,213,1200,171,1260,149.3C1320,128,1380,128,1410,128L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+					</svg>
 				</div>
 
 				<div className={`${styles.customer_info} justify-evenly bg-white relative flex p-10`}>
@@ -100,7 +106,7 @@ function Home() {
 				<div className={`${styles.customer_info} justify-evenly bg-white relative flex p-10`}>
 					<div className="flex flex-col items-center h-full lg:pr-10">
 						<h2 className="text-3xl font-bold mb-4">Artisanal Creations</h2>
-						<p className={`${fontStyles.description_font} text-left text-lg max-w-[530px]`}>Dive into a world of artisanal excellence only at "Ahola! Awesome Store." Discover handcrafted treasures that blend tradition with innovation, from bespoke clothing to unique accessories. Our curated collection celebrates the artistry of skilled craftsmen, offering one-of-a-kind pieces that tell stories and inspire individuality. Embrace the beauty of craftsmanship and make a statement with every piece you choose.</p>
+						<p className={`${fontStyles.description_font} text-left text-lg max-w-[530px]`}>Dive into a world of artisanal excellence only at "Aloha! Awesome Store." Discover handcrafted treasures that blend tradition with innovation, from bespoke clothing to unique accessories. Our curated collection celebrates the artistry of skilled craftsmen, offering one-of-a-kind pieces that tell stories and inspire individuality. Embrace the beauty of craftsmanship and make a statement with every piece you choose.</p>
 						<img className="mt-5 w-[250px]" src={turtleImg} alt="turtle img" />
 						<Link to="/shop" className="mt-5 mb-10 w-[90%] md:w-[30rem] text-white text-xl rounded-md border-4 border-[#f22033] bg-[#eb4034] px-5 py-3 hover:bg-[#e8624a] hover:text-white font-bold transition ease-in-out duration-300 inline-block">
 							Check Artist Crafts
