@@ -69,7 +69,7 @@ function Shop() {
 						<header className="bg-[#f2efee]">
 							<div className={`${styles.header} relative flex`}>
 								<div className={`${styles.beach_img} img-container w-[100vw] lg:w-[600px] h-[400px] lg:h-[500px] overflow-hidden`}>
-									<img className={` w-full h-full mr-[5px] object-cover`} src={beachImg} alt="lady shopping" />
+									<img loading="lazy" className={` w-full h-full mr-[5px] object-cover`} src={beachImg} alt="beach img" />
 								</div>
 								<div className="flex flex-col flex-grow items-center h-full p-10 text-[#423c3a]">
 									<h2 className="text-3xl font-bold mt-10 mb-4">Our Products</h2>

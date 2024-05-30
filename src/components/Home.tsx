@@ -21,13 +21,13 @@ function Home() {
 			<Navigation />
 			<div className="banner bg-[#e2f1f4] w-full h-10 -mt-3 "></div>
 			<div className={`${styles.intro_container} flex relative justify-between mt-7`}>
-				<img className="absolute left-1/2 transform -translate-x-1/2 z-[-40]" src={waterColorBg} alt="watercolor background" />
+				<img loading="lazy" className="absolute left-1/2 transform -translate-x-1/2 z-[-40]" src={waterColorBg} alt="watercolor background" />
 				<div className={`relative  pl-10`}>
 					<div className={`${styles.welcome_image1} bg-[#fef733] absolute top-[85px] left-[280px] w-[320px] h-[320px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "3px 4px 10px 3px rgba(251, 198, 12, 0.5)" }}>
-						<img className="w-full h-full object-cover" src={ladyYellowBgImg} alt="girl yellow background" />
+						<img loading="lazy" className="w-full h-full object-cover" src={ladyYellowBgImg} alt="girl yellow background" />
 					</div>
 					<div className={`${styles.welcome_image2} bg-[#4493b9] top-0 left-10 w-[350px] h-[350px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "2px 4px 6px 5px rgba(73, 161, 227, 0.5)" }}>
-						<img className="z-10 w-full h-auto object-cover mb-20" src={dogImg} alt="dog clothing" />
+						<img loading="lazy" className="z-10 w-full h-auto object-cover mb-20" src={dogImg} alt="dog clothing" />
 					</div>
 				</div>
 
@@ -51,7 +51,7 @@ function Home() {
 
 					<div className="w-full flex justify-center">
 						<div className={`${styles.welcome_image3} bg-[#4493b9] mb-5 w-[270px] h-[270px] overflow-hidden rounded-full `}>
-							<img className="z-10 w-full h-auto object-cover mb-10" src={dogImg} alt="dog clothing" />
+							<img loading="lazy" className="z-10 w-full h-auto object-cover mb-10" src={dogImg} alt="dog clothing" />
 						</div>
 					</div>
 					<p className={`${fontStyles.header_font} text-3xl mb-8`}>Where awesome finds its place.</p>
@@ -66,19 +66,19 @@ function Home() {
 				<div className="relative">
 					<div className="cards-container flex justify-center gap-10 flex-wrap py-20 px-15 bg-gray-100">
 						<Link to="/shop?category=electronics" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<img src={electronicImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="electronic background" />
+							<img loading="lazy" src={electronicImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="electronic background" />
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>ELECTRONICS</h2>
 						</Link>
 						<Link to="/shop?category=men's clothing" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<img src={mensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="men's clothing background" />
+							<img loading="lazy" src={mensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="men's clothing background" />
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>MEN'S CLOTHING</h2>
 						</Link>
 						<Link to="/shop?category=women's clothing" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<img src={womensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="women's clothing background" />
+							<img loading="lazy" src={womensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="women's clothing background" />
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>WOMEN'S CLOTHING</h2>
 						</Link>
 						<Link to="/shop?category=jewelery" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<img src={jewelryImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="jewelry background" />
+							<img loading="lazy" src={jewelryImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="jewelry background" />
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>JEWELRY</h2>
 						</Link>
 					</div>
@@ -91,12 +91,12 @@ function Home() {
 				<div className={`${styles.customer_info} justify-evenly bg-white relative flex p-10`}>
 					<div className="relative w-[100vw] md:w-[730px] h-[500px] ">
 						<div className="absolute hidden md:block w-full h-full bg-[#e0afaf] transform rotate-3 shadow-md"></div>
-						<img className="absolute w-full h-full mr-[5px] object-cover" src={ladyShoppingImg} alt="lady shopping" />
+						<img loading="lazy" className="absolute w-full h-full mr-[5px] object-cover" src={ladyShoppingImg} alt="lady shopping" />
 					</div>
 					<div className="flex flex-col items-center h-full md:pl-10">
 						<h2 className="text-3xl font-bold mt-10 mb-4">Latest Fashion Trends</h2>
 						<p className={`${fontStyles.description_font} text-left text-lg max-w-[530px]`}>Welcome to our fantastic store, where fashion dreams come true! Discover the latest trends and stylish outfits that turn heads, along with accessories that make bold statements. Dive into our curated collection, offering everything from casual chic to glamorous evening wear. Explore designer pieces, must-have essentials, and unique accessories to add magic to your look. Our friendly team is here to guide you every step of the way, making your shopping experience delightful. Join us on this exciting fashion journey at our fabulous store!</p>
-						<img className="mt-5 w-[200px] rotate-45" src={flowerImg} alt="flower img" />
+						<img loading="lazy" className="mt-5 w-[200px] rotate-45" src={flowerImg} alt="flower img" />
 						<Link to="/shop" className="mt-5 w-[90%] md:w-[30rem] text-white text-xl rounded-md border-4 border-[#687820] bg-[#89a02c] px-5 py-3 hover:bg-[#557820] hover:text-white font-bold transition ease-in-out duration-300 inline-block">
 							Browse Products
 						</Link>
@@ -107,14 +107,14 @@ function Home() {
 					<div className="flex flex-col items-center h-full lg:pr-10">
 						<h2 className="text-3xl font-bold mb-4">Artisanal Creations</h2>
 						<p className={`${fontStyles.description_font} text-left text-lg max-w-[530px]`}>Dive into a world of artisanal excellence only at "Aloha! Awesome Store." Discover handcrafted treasures that blend tradition with innovation, from bespoke clothing to unique accessories. Our curated collection celebrates the artistry of skilled craftsmen, offering one-of-a-kind pieces that tell stories and inspire individuality. Embrace the beauty of craftsmanship and make a statement with every piece you choose.</p>
-						<img className="mt-5 w-[250px]" src={turtleImg} alt="turtle img" />
+						<img loading="lazy" className="mt-5 w-[250px]" src={turtleImg} alt="turtle img" />
 						<Link to="/shop" className="mt-5 mb-10 w-[90%] md:w-[30rem] text-white text-xl rounded-md border-4 border-[#f22033] bg-[#eb4034] px-5 py-3 hover:bg-[#e8624a] hover:text-white font-bold transition ease-in-out duration-300 inline-block">
 							Check Artist Crafts
 						</Link>
 					</div>
 					<div className="relative w-[100vw] md:w-[730px] h-[500px]">
 						<div className="absolute hidden md:block w-full h-full bg-[#4493b9] transform -rotate-3 shadow-md"></div>
-						<img className="absolute w-full h-full mr-[5px] object-cover" src={manShopping} alt="lady shopping" />
+						<img loading="lazy" className="absolute w-full h-full mr-[5px] object-cover" src={manShopping} alt="man shopping" />
 					</div>
 				</div>
 			</main>
