@@ -7,11 +7,11 @@ import imgStyle from "../styles/img.module.scss";
 
 function Footer() {
 	return (
-		<footer className="text-center bg-[#566b84] text-white">
+		<footer className="text-center bg-[#105580] text-white">
 			<div className="py-8 px-4 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
 				{/* Company */}
 				<div>
-					<h3 className="text-lg font-bold mb-4">COMPANY</h3>
+					<h3 className="text-lg font-bold mb-4 underline-offset-4 underline">COMPANY</h3>
 					<ul className={`space-y-2 ${footerStyle.link_font}`}>
 						<li>
 							<a href="#" className="hover:text-gray-300 hover:underline">
@@ -38,7 +38,7 @@ function Footer() {
 
 				{/* Brand */}
 				<div>
-					<h3 className="text-lg font-semibold mb-4">BRAND</h3>
+					<h3 className="text-lg font-semibold mb-4 underline-offset-4 underline">BRAND</h3>
 					<ul className={`space-y-2 ${footerStyle.link_font}`}>
 						<li>
 							<a href="#" className="hover:text-gray-300 hover:underline">
@@ -70,7 +70,7 @@ function Footer() {
 
 				{/* Help */}
 				<div>
-					<h3 className="text-lg font-semibold mb-4">HELP</h3>
+					<h3 className="text-lg font-semibold mb-4 underline-offset-4 underline">SUPPORT</h3>
 					<ul className={`space-y-2 ${footerStyle.link_font}`}>
 						<li>
 							<a href="#" className="hover:text-gray-300 hover:underline">
@@ -145,7 +145,7 @@ function Footer() {
 						<img src={githubSvg} alt="github logo" className="h-8 w-auto transform hover:rotate-[360deg] transition-transform duration-700 ease-in-out" />
 						<p className="text-gray-600">Developed by NovaCat35</p>
 					</a>
-					<div className="mt-4 text-gray-500">&copy; 2024 Aloha Awesome Store. All rights reserved.</div>
+					<div className="mt-4 text-[#138ed3]">&copy; 2024 Aloha Awesome Store. All rights reserved.</div>
 				</div>
 			</div>
 		</footer>

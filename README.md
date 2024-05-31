@@ -61,5 +61,4 @@ During development, I encountered challenges in integrating the different sortin
 - https://www.pexels.com/
 - https://unsplash.com/
 - https://www.vexels.com/png-svg/preview/188314/aloha-flower-hawaiian-lettering
-- https://pixabay.com/vectors/watercolor-background-wallpaper-4117017/
 - https://www.svgrepo.com/svg
