@@ -7,7 +7,7 @@ import imgStyle from "../styles/img.module.scss";
 
 function Footer() {
 	return (
-		<footer className="text-center bg-[#105580] text-white">
+		<footer className="text-center bg-[#1b73a8] text-white">
 			<div className="py-8 px-4 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
 				{/* Company */}
 				<div>
@@ -101,19 +101,19 @@ function Footer() {
 				</div>
 			</div>
 
-			<div className="bg-gray-800 pt-5 pb-8 px-4">
+			<div className="bg-[#5bb6c8] pt-5 pb-8 px-4">
 				{/* Contact Info */}
 				<div className="max-w-7xl mx-auto mt-8 border-t border-gray-700 pt-4">
 					<div className="flex items-center justify-center flex-wrap gap-x-10 gap-y-5">
-						<a href="/yolo" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
+						<a href="/yolo" className="text-black bg-[#f0c033] border-2 border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-[#ec6e46] hover:text-white">
 							<img src={phoneSvg} alt="phone svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
 							(000)-ALOHA
 						</a>
-						<a href="mailto:support@aloha.xyz" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
+						<a href="mailto:support@aloha.xyz" className="text-black bg-[#f0c033] border-2 border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-[#ec6e46] hover:text-white">
 							<img src={emailSvg} alt="email svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
 							support@ALOHA.org
 						</a>
-						<a href="/yolo" className="text-white border border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-gray-300 hover:text-gray-300">
+						<a href="/yolo" className="text-black bg-[#f0c033] border-2 border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-[#ec6e46] hover:text-white">
 							<img src={chatSvg} alt="chat svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
 							Chat with Us
 						</a>
@@ -145,7 +145,7 @@ function Footer() {
 						<img src={githubSvg} alt="github logo" className="h-8 w-auto transform hover:rotate-[360deg] transition-transform duration-700 ease-in-out" />
 						<p className="text-gray-600">Developed by NovaCat35</p>
 					</a>
-					<div className="mt-4 text-[#138ed3]">&copy; 2024 Aloha Awesome Store. All rights reserved.</div>
+					<div className="mt-4 font-semibold text-[#1c73a8]">&copy; 2024 Aloha Awesome Store. All rights reserved.</div>
 				</div>
 			</div>
 		</footer>

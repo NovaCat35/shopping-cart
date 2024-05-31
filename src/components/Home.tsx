@@ -14,6 +14,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import styles from "../styles/home.module.scss";
 import fontStyles from "../styles/fonts.module.scss";
+import ImageComponent from "./ImageComponent";
 
 function Home() {
 	return (
@@ -24,10 +25,10 @@ function Home() {
 				<img loading="lazy" className="absolute left-1/2 transform -translate-x-1/2 w-full" src={waterColorBg} alt="watercolor background" />
 				<div className={`relative pl-10`}>
 					<div className={`${styles.welcome_image1} z-10 bg-[#fef733] absolute top-[85px] left-[280px] w-[320px] h-[320px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "3px 4px 10px 3px rgba(251, 198, 12, 0.5)" }}>
-						<img loading="lazy" className="w-full h-full object-cover" src={ladyYellowBgImg} alt="girl yellow background" />
+						<ImageComponent imgSrc={ladyYellowBgImg} blurHashStr={"LQRL.d?Q~HDt_BIbM+xo-Me?Ieou"} />
 					</div>
 					<div className={`${styles.welcome_image2} bg-[#4493b9] w-[350px] h-[350px] overflow-hidden rounded-full shadow-lg`} style={{ boxShadow: "2px 4px 6px 5px rgba(73, 161, 227, 0.5)" }}>
-						<img loading="lazy" className="z-20 w-full h-auto object-cover mb-20" src={dogImg} alt="dog clothing" />
+						<ImageComponent imgSrc={dogImg} blurHashStr={"LNC@?W-o1k9~K-Ne$K-59~Rl,-xt"} />
 					</div>
 				</div>
 
@@ -66,19 +67,19 @@ function Home() {
 				<div className="relative">
 					<div className="cards-container flex justify-center gap-10 flex-wrap pt-[120px] py-20 px-15 bg-[#f7f7f9]">
 						<Link to="/shop?category=electronics" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<img loading="lazy" src={electronicImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="electronic background" />
+							<ImageComponent imgSrc={electronicImg} blurHashStr={"LcM7P}~pR49H.TxaNGe?r=IUWGWA"} />
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>ELECTRONICS</h2>
 						</Link>
 						<Link to="/shop?category=men's clothing" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<img loading="lazy" src={mensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="men's clothing background" />
+							<ImageComponent imgSrc={mensWearImg} blurHashStr={"L4DI?@0200%$_#O[0M~9%~+tIVt7"} />
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>MEN'S CLOTHING</h2>
 						</Link>
 						<Link to="/shop?category=women's clothing" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<img loading="lazy" src={womensWearImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="women's clothing background" />
+							<ImageComponent imgSrc={womensWearImg} blurHashStr={"LLI#u,_N?bRP?b%MV@kC%gRPIoRj"} />
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>WOMEN'S CLOTHING</h2>
 						</Link>
 						<Link to="/shop?category=jewelery" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<img loading="lazy" src={jewelryImg} className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105" alt="jewelry background" />
+							<ImageComponent imgSrc={jewelryImg} blurHashStr={"L3Fh6R003s:k005RLLxao~-obw^P"} />
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>JEWELRY</h2>
 						</Link>
 					</div>

@@ -29,6 +29,8 @@ I went into this project with the goal of mastering essential React concepts, in
 
 During development, I encountered challenges in integrating the different sorting/filtering functionality as each search query, category selector, filter tool, and pagination called in a certain order to fully bring about a smooth user experience. While leveraging useful hooks like useSearchParams for URL querying and data retrieval, I faced further issues of filtering resets with each search. To overcome this, I established a shared context that facilitated seamless logic integration between components, ensuring a coherent flow and abstracting complexities. I also broke apart the logic behind pagination from the rest of the store page to work with a already filtered list of displayed items.
 
+Recently, during post-production I came back to this project due overhauling some images and designs. I also attempted to optimize this site's performance. I been playing around with understanding how to make larger images works, where I struggle in the past with design and performance issues due to large files. One implementations I done to this site is lazy loading images and using blurHash to allow images to be loaded faster while giving optimal user experience.
+
 ## Libraries 📚
 
 ```
@@ -39,6 +41,7 @@ During development, I encountered challenges in integrating the different sortin
    npx tailwindcss init -p
    npm install -D sass
    npm install react-paginate
+   npm install --save blurhash react-blurhash
 ```
 
 > Don't forget to modify tailwind.config
