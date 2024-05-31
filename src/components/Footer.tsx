@@ -142,7 +142,7 @@ function Footer() {
 				</div>
 				{/* Developer Info */}
 				<div className="max-w-7xl mx-auto mt-8 flex flex-col items-center">
-					<a href="https://github.com/NovaCat35/shopping-cart" className="footerStyle w-80 flex items-center justify-center space-x-2 rounded-md bg-[#f6fffe] p-2">
+					<a href="https://github.com/NovaCat35/shopping-cart" className="footerStyle w-80 flex items-center justify-center space-x-2 rounded-md bg-[#f6fffe] p-2" target="blank">
 						<img src={githubSvg} alt="github logo" className="h-8 w-auto" />
 						<p className="text-gray-600">Developed by NovaCat35</p>
 					</a>
