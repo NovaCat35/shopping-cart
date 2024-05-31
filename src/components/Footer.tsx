@@ -122,19 +122,19 @@ function Footer() {
 				{/* Legal */}
 				<div className="max-w-7xl mx-auto mt-8 flex items-center justify-center">
 					<div className={`flex items-center justify-center space-x-8 flex-wrap ${footerStyle.links}`}>
-						<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
+						<a href="#" className={` hover:text-white hover:underline ${footerStyle.typewriter_font}`}>
 							Privacy
 						</a>
-						<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
+						<a href="#" className={`text-white underline-offset-4 hover:underline ${footerStyle.typewriter_font}`}>
 							Accessibility
 						</a>
-						<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
+						<a href="#" className={`text-white underline-offset-4  hover:underline ${footerStyle.typewriter_font}`}>
 							Terms of Service
 						</a>
-						<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
+						<a href="#" className={`text-white underline-offset-4  hover:underline ${footerStyle.typewriter_font}`}>
 							Refund Policy
 						</a>
-						<a href="#" className={`text-white hover:text-gray-300 hover:underline ${footerStyle.typewriter_font}`}>
+						<a href="#" className={`text-white underline-offset-4  hover:underline ${footerStyle.typewriter_font}`}>
 							Conformity
 						</a>
 					</div>
