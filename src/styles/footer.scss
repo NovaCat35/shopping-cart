@@ -1,0 +1,8 @@
+.footerStyle {
+	&:hover {
+		img {
+			transform: rotate(360deg);
+			transition: transform 500ms ease-in-out;
+		}
+	}
+}

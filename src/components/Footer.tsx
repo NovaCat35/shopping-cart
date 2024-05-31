@@ -2,7 +2,8 @@ import githubSvg from "../assets/github.svg";
 import chatSvg from "../assets/chat.svg";
 import phoneSvg from "../assets/phone.svg";
 import emailSvg from "../assets/email.svg";
-import footerStyle from "../styles/fonts.module.scss";
+import style from "../styles/fonts.module.scss";
+import "../styles/footer.scss";
 import imgStyle from "../styles/img.module.scss";
 
 function Footer() {
@@ -12,7 +13,7 @@ function Footer() {
 				{/* Company */}
 				<div>
 					<h3 className="text-lg font-bold mb-4 underline-offset-4 underline">COMPANY</h3>
-					<ul className={`space-y-2 ${footerStyle.link_font}`}>
+					<ul className={`space-y-2 ${style.link_font}`}>
 						<li>
 							<a href="#" className="hover:text-gray-300 hover:underline">
 								Our Story
@@ -39,7 +40,7 @@ function Footer() {
 				{/* Brand */}
 				<div>
 					<h3 className="text-lg font-semibold mb-4 underline-offset-4 underline">BRAND</h3>
-					<ul className={`space-y-2 ${footerStyle.link_font}`}>
+					<ul className={`space-y-2 ${style.link_font}`}>
 						<li>
 							<a href="#" className="hover:text-gray-300 hover:underline">
 								Style & Fit
@@ -71,7 +72,7 @@ function Footer() {
 				{/* Help */}
 				<div>
 					<h3 className="text-lg font-semibold mb-4 underline-offset-4 underline">SUPPORT</h3>
-					<ul className={`space-y-2 ${footerStyle.link_font}`}>
+					<ul className={`space-y-2 ${style.link_font}`}>
 						<li>
 							<a href="#" className="hover:text-gray-300 hover:underline">
 								Shipping & Returns
@@ -121,28 +122,28 @@ function Footer() {
 				</div>
 				{/* Legal */}
 				<div className="max-w-7xl mx-auto mt-8 flex items-center justify-center">
-					<div className={`flex items-center justify-center space-x-8 flex-wrap ${footerStyle.links}`}>
-						<a href="#" className={` hover:text-white hover:underline ${footerStyle.typewriter_font}`}>
+					<div className={`flex items-center justify-center space-x-8 flex-wrap ${style.links}`}>
+						<a href="#" className={` hover:text-white hover:underline ${style.typewriter_font}`}>
 							Privacy
 						</a>
-						<a href="#" className={`text-white underline-offset-4 hover:underline ${footerStyle.typewriter_font}`}>
+						<a href="#" className={`text-white underline-offset-4 hover:underline ${style.typewriter_font}`}>
 							Accessibility
 						</a>
-						<a href="#" className={`text-white underline-offset-4  hover:underline ${footerStyle.typewriter_font}`}>
+						<a href="#" className={`text-white underline-offset-4  hover:underline ${style.typewriter_font}`}>
 							Terms of Service
 						</a>
-						<a href="#" className={`text-white underline-offset-4  hover:underline ${footerStyle.typewriter_font}`}>
+						<a href="#" className={`text-white underline-offset-4  hover:underline ${style.typewriter_font}`}>
 							Refund Policy
 						</a>
-						<a href="#" className={`text-white underline-offset-4  hover:underline ${footerStyle.typewriter_font}`}>
+						<a href="#" className={`text-white underline-offset-4  hover:underline ${style.typewriter_font}`}>
 							Conformity
 						</a>
 					</div>
 				</div>
 				{/* Developer Info */}
 				<div className="max-w-7xl mx-auto mt-8 flex flex-col items-center">
-					<a href="https://github.com/NovaCat35/shopping-cart" className="w-80 flex items-center justify-center space-x-2 rounded-md bg-gray-200 p-2">
-						<img src={githubSvg} alt="github logo" className="h-8 w-auto transform hover:rotate-[360deg] transition-transform duration-700 ease-in-out" />
+					<a href="https://github.com/NovaCat35/shopping-cart" className="footerStyle w-80 flex items-center justify-center space-x-2 rounded-md bg-[#f6fffe] p-2">
+						<img src={githubSvg} alt="github logo" className="h-8 w-auto" />
 						<p className="text-gray-600">Developed by NovaCat35</p>
 					</a>
 					<div className="mt-4 font-semibold text-[#1c73a8]">&copy; 2024 Aloha Awesome Store. All rights reserved.</div>
