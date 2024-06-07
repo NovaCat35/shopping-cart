@@ -67,19 +67,27 @@ function Home() {
 				<div className="relative">
 					<div className="cards-container flex justify-center gap-10 flex-wrap pt-[120px] py-20 px-15 bg-[#f7f7f9]">
 						<Link to="/shop?category=electronics" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<ImageComponent imgSrc={electronicImg} blurHashStr={"LcM7P}~pR49H.TxaNGe?r=IUWGWA"} />
+							<div className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105">
+								<ImageComponent imgSrc={electronicImg} blurHashStr={"LcM7P}~pR49H.TxaNGe?r=IUWGWA"} />
+							</div>
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>ELECTRONICS</h2>
 						</Link>
 						<Link to="/shop?category=men's clothing" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<ImageComponent imgSrc={mensWearImg} blurHashStr={"L4DI?@0200%$_#O[0M~9%~+tIVt7"} />
+							<div className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105">
+								<ImageComponent imgSrc={mensWearImg} blurHashStr={"L4DI?@0200%$_#O[0M~9%~+tIVt7"} />
+							</div>
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>MEN'S CLOTHING</h2>
 						</Link>
 						<Link to="/shop?category=women's clothing" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<ImageComponent imgSrc={womensWearImg} blurHashStr={"LLI#u,_N?bRP?b%MV@kC%gRPIoRj"} />
+							<div className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105">
+								<ImageComponent imgSrc={womensWearImg} blurHashStr={"LLI#u,_N?bRP?b%MV@kC%gRPIoRj"} />
+							</div>
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>WOMEN'S CLOTHING</h2>
 						</Link>
 						<Link to="/shop?category=jewelery" className="card z-10 w-[300px] h-[350px] relative overflow-hidden rounded-lg">
-							<ImageComponent imgSrc={jewelryImg} blurHashStr={"L3Fh6R003s:k005RLLxao~-obw^P"} />
+							<div className="w-full h-full object-cover transform scale-100 transition duration-300 ease-in-out hover:scale-105">
+								<ImageComponent imgSrc={jewelryImg} blurHashStr={"L3Fh6R003s:k005RLLxao~-obw^P"} />
+							</div>
 							<h2 className={`text-white text-2xl absolute left-[50%] bottom-5 transform -translate-x-1/2 translate-y-[-50%] flex justify-center items-center bg-black bg-opacity-50 p-2 w-full ${fontStyles.typewriter_font}`}>JEWELRY</h2>
 						</Link>
 					</div>

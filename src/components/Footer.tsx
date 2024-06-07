@@ -104,7 +104,7 @@ function Footer() {
 
 			<div className="bg-[#5bb6c8] pt-5 pb-8 px-4">
 				{/* Contact Info */}
-				<div className="max-w-7xl mx-auto mt-8 border-t border-gray-700 pt-4">
+				<div className="max-w-7xl mx-auto mt-8 border-t-2 border-[#1c73a8] pt-4">
 					<div className="flex items-center justify-center flex-wrap gap-x-10 gap-y-5">
 						<a href="/yolo" className="text-black bg-[#f0c033] border-2 border-white rounded px-3 py-1 flex items-center justify-center gap-x-2 hover:border-[#ec6e46] hover:text-white">
 							<img src={phoneSvg} alt="phone svg" className={`w-4 h-4 ${imgStyle.filter_img_white}`} />
